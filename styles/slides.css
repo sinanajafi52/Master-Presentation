@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     padding: var(--space-lg) var(--space-xl);
-    padding-left: calc(170px + var(--space-xl));
+    padding-left: calc(200px + var(--space-lg));
     opacity: 0;
     visibility: hidden;
     transform: translateX(50px);
@@ -41,7 +41,8 @@
 
 /* Slide when mini-nav is collapsed */
 .mini-nav.collapsed~.main-content .slide {
-    padding-left: var(--space-xl);
+    padding-left: var(--space-lg);
+    transition: padding-left var(--transition-normal);
 }
 
 /* =====================================================
@@ -871,11 +872,11 @@
 @media (max-width: 1366px) {
     .slide {
         padding: var(--space-md) var(--space-lg);
-        padding-left: calc(140px + var(--space-lg));
+        padding-left: calc(190px + var(--space-md));
     }
 
     .mini-nav.collapsed~.main-content .slide {
-        padding-left: var(--space-lg);
+        padding-left: var(--space-md);
     }
 
     .sub-questions {
