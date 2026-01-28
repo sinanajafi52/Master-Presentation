@@ -163,24 +163,24 @@ const SLIDES = [
         notes: 'Emphasize the diversity of cases - this strengthens the findings. Manual coding shows rigor.'
     },
 
-    // ===== SLIDE 6: Key Finding #1 - Universal Success Factors =====
+    // ===== SLIDE 6: Key Finding #1 - Success Factors =====
     {
         id: 6,
         section: 'findings',
         sectionColor: 'findings',
-        title: 'Finding #1: Universal Success Factors',
-        shortTitle: 'Success Factors',
+        title: 'Finding #1: Success Factors Across Cases',
+        shortTitle: 'Success Fact...',
         duration: 120,
         isBackup: false,
         content: {
             type: 'factors',
-            headline: 'Five Success Factors Present Across All 7 Cases',
+            headline: 'Five Success Factors Present Across All Seven Cases Examined',
             factors: [
                 {
                     icon: '🤝',
                     title: 'Trust & Psychological Safety',
                     description: 'Foundation enabling risk-taking and experimentation',
-                    evidence: 'Present in 100% of cases'
+                    evidence: 'Present in all seven cases'
                 },
                 {
                     icon: '📚',
@@ -208,7 +208,7 @@ const SLIDES = [
                 }
             ]
         },
-        notes: 'These are UNIVERSAL - found in all cases. This is the foundation. Culture beats structure.'
+        notes: 'These five factors were found in all seven cases examined. This is the foundation. Culture beats structure.'
     },
 
     // ===== SLIDE 7: Key Finding #2 - Team Experience Matters Most =====
@@ -222,10 +222,10 @@ const SLIDES = [
         isBackup: false,
         content: {
             type: 'comparison',
-            headline: 'Surprising Discovery: Team Experience >>> Framework Choice',
-            mainInsight: "Team's prior agile experience contributes substantially more to agility outcomes than framework selection",
+            headline: 'Key Discovery: Team Experience Matters More Than Framework Choice',
+            mainInsight: "The findings suggest that team members' prior agile experience contributes substantially more to agility outcomes (estimated 20-40× based on cross-case comparison) than the specific choice of framework",
             multiplier: '20-40×',
-            multiplierNote: 'based on cross-case comparison',
+            multiplierNote: 'estimated based on cross-case comparison',
             cases: [
                 {
                     id: 'B',
@@ -246,7 +246,7 @@ const SLIDES = [
             ],
             implication: 'Hire for agile mindset and experience, not just framework expertise'
         },
-        notes: 'This is counterintuitive - most people focus on framework choice. Experience is 20-40x more important!'
+        notes: 'This is counterintuitive - most people focus on framework choice. Cross-case comparison suggests experience is 20-40× more important!'
     },
 
     // ===== SLIDE 8: Key Finding #3 - Critical 6-8 Person Threshold =====
@@ -276,7 +276,7 @@ const SLIDES = [
                 above: {
                     cases: ['A', 'D', 'F'],
                     size: '7-10 people',
-                    result: 'Coordination failures emerged, agility declined without proactive intervention'
+                    result: 'Coordination challenges emerged; agility declined without proactive intervention'
                 }
             },
             actionableInsight: 'Founders must anticipate this threshold and implement selective structural mechanisms BEFORE reaching 6-8 employees'
@@ -454,10 +454,10 @@ const SLIDES = [
         content: {
             type: 'conclusion',
             theoretical: [
-                'Extends organizational agility theory to micro-enterprises (2-10 employees)',
-                'Integrates Dynamic Capabilities + Complexity Leadership + Contingency theories for first time',
+                'Contributes to organizational agility theory by examining micro-enterprises (2-10 employees)',
+                'Integrates Dynamic Capabilities + Complexity Leadership + Contingency theories',
                 'Identifies and validates critical 6-8 person threshold with mathematical proof',
-                'Demonstrates team experience contributes 20-40× more than framework choice'
+                'Suggests team experience contributes substantially more (estimated 20-40×) than framework choice'
             ],
             practical: [
                 'Five-layer framework for designing adaptive, scalable micro-enterprises',
