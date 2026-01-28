@@ -74,10 +74,10 @@ const SLIDES = [
             type: 'question',
             mainQuestion: 'How can early-stage German startups (2-10 employees) design agile business structures that enable organizational adaptability, scalability, and long-term sustainability?',
             subQuestions: [
-                'How do founders define and understand organizational agility?',
-                'What mechanisms enable agility in resource-constrained contexts?',
-                'What challenges emerge when scaling from 2 to 10+ employees?',
-                'What design principles guide adaptive, scalable organizations?'
+                'What constitutes organizational agility in early-stage startups, and how does it differ from software-based agile methodologies?',
+                'What structural, cultural, and leadership factors enable or constrain organizational agility in startup contexts?',
+                'How can startups maintain agility while scaling, and what obstacles emerge during growth?',
+                'What design principles and management practices can founders employ to build adaptive, scalable, and sustainable agile structures?'
             ]
         },
         notes: 'Read the main question slowly and clearly. Sub-questions show the logical structure of the investigation.'
@@ -309,7 +309,7 @@ const SLIDES = [
                     name: 'Cultural Foundations',
                     type: 'culture',
                     description: 'PREREQUISITES (NOT Optional)',
-                    items: 'Trust | Psychological Safety | Learning Orientation',
+                    items: 'Trust | Psychological Safety | Learning Orientation | Results Focus',
                     isPrerequisite: true
                 },
                 {
@@ -356,37 +356,37 @@ const SLIDES = [
                     icon: '🏗️',
                     number: 1,
                     title: 'Foundation First',
-                    description: 'Build trust and psychological safety before introducing frameworks'
+                    description: 'Establish trust, psychological safety, and learning orientation before selecting frameworks. Culture proves harder to change retroactively than structure.'
                 },
                 {
                     icon: '🌱',
                     number: 2,
-                    title: 'Start Minimal, Grow Gradually',
-                    description: 'Begin with lightweight practices, formalize only as needed'
+                    title: 'Gradual Formalization',
+                    description: 'Add structure incrementally as team grows; avoid premature bureaucracy. The 6-8 person threshold requires proactive coordination mechanisms.'
                 },
                 {
                     icon: '💎',
                     number: 3,
-                    title: 'Extract Team Principles',
-                    description: 'Let organizational values emerge from team, not imposed top-down'
+                    title: 'Principle Extraction Over Framework Adoption',
+                    description: 'Learn from Scrum, Kanban, OKR, Spotify models, but customize based on context. Framework choice contributes far less than team experience.'
                 },
                 {
                     icon: '🔀',
                     number: 4,
-                    title: 'Accept Hybrid Reality',
-                    description: 'German regulations require blended agile-traditional models'
+                    title: 'Accept Hybridity as Pragmatic Necessity',
+                    description: 'Pure agility proves impossible with German Geschäftsführer liability. Hybrid models represent permanent equilibrium, not implementation failures.'
                 },
                 {
                     icon: '🎯',
                     number: 5,
-                    title: 'Monitor the Threshold',
-                    description: 'Proactively intervene at 6-8 person inflection point'
+                    title: 'Monitor the 6-8 Person Threshold',
+                    description: 'This critical inflection point requires proactive structural intervention through domain-based decisions or regular alignment meetings.'
                 },
                 {
                     icon: '🛡️',
                     number: 6,
-                    title: 'Preserve Culture Through Growth',
-                    description: 'Explicit effort required to maintain foundations during scaling'
+                    title: 'Preserve Culture During Growth',
+                    description: 'Agility often peaks in first 1-2 years before complexity increases. Maintaining agility during scaling requires intentional cultural reinforcement.'
                 }
             ]
         },
