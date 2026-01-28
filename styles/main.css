@@ -469,7 +469,7 @@ img {
 }
 
 .mini-nav.collapsed {
-    transform: translateX(-120px);
+    transform: translateX(-150px);
 }
 
 .mini-nav-toggle {
@@ -503,7 +503,7 @@ img {
 }
 
 .mini-nav-content {
-    width: 120px;
+    width: 150px;
     height: 100%;
     padding: var(--space-sm);
     background: rgba(10, 10, 15, 0.95);
@@ -524,7 +524,7 @@ img {
     gap: var(--space-xs);
     padding: var(--space-xs) var(--space-sm);
     border-radius: var(--radius-sm);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: var(--color-text-secondary);
     cursor: pointer;
     transition: all var(--transition-fast);
@@ -546,8 +546,8 @@ img {
 }
 
 .nav-dot {
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: var(--color-text-muted);
     flex-shrink: 0;
