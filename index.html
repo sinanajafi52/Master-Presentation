@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agile Business Structure for Startups | Master's Thesis Defense - Sina Najafi</title>
+    <meta name="description" content="Master's Thesis Defense: A Qualitative Multi-Case Study of Early-Stage German Startups (2-10 Employees) by Sina Najafi">
+    <meta name="author" content="Sina Najafi">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/slides.css">
+    <link rel="stylesheet" href="styles/sphere.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-sphere"></div>
+            <p class="loader-text">Preparing Presentation...</p>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="app" class="app hidden">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <div class="mode-switcher">
+                    <button id="btn-sphere-mode" class="mode-btn active" data-mode="sphere" aria-label="Sphere Mode">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            <path d="M2 12h20"></path>
+                        </svg>
+                        <span>SPHERE</span>
+                    </button>
+                    <button id="btn-linear-mode" class="mode-btn" data-mode="linear" aria-label="Linear Mode">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                        <span>LINEAR</span>
+                    </button>
+                    <button id="btn-menu-mode" class="mode-btn" data-mode="menu" aria-label="Quick Jump Menu">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                        <span>MENU</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="top-bar-center">
+                <div class="slide-indicator">
+                    <span id="current-slide-num">1</span>
+                    <span class="separator">/</span>
+                    <span id="total-slides-num">12</span>
+                </div>
+            </div>
+            
+            <div class="top-bar-right">
+                <div class="timer-container">
+                    <div class="timer" id="timer">
+                        <span class="timer-elapsed" id="timer-elapsed">00:00</span>
+                        <span class="timer-separator">/</span>
+                        <span class="timer-target">20:00</span>
+                    </div>
+                    <div class="pace-indicator" id="pace-indicator">
+                        <span class="pace-dot"></span>
+                        <span class="pace-text">On Track</span>
+                    </div>
+                </div>
+                <button id="btn-fullscreen" class="icon-btn" aria-label="Toggle Fullscreen">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <polyline points="9 21 3 21 3 15"></polyline>
+                        <line x1="21" y1="3" x2="14" y2="10"></line>
+                        <line x1="3" y1="21" x2="10" y2="14"></line>
+                    </svg>
+                </button>
+                <button id="btn-help" class="icon-btn" aria-label="Keyboard Shortcuts">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress-bar">
+                <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- Mini Navigation (Left Sidebar) -->
+        <nav class="mini-nav" id="mini-nav">
+            <button class="mini-nav-toggle" id="mini-nav-toggle" aria-label="Toggle Navigation">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <div class="mini-nav-content" id="mini-nav-content">
+                <ul class="mini-nav-list" id="mini-nav-list">
+                    <!-- Populated by JavaScript -->
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content" id="main-content">
+            <!-- Sphere Mode Container -->
+            <div class="sphere-container" id="sphere-container">
+                <div id="sphere-canvas"></div>
+                <div class="sphere-overlay">
+                    <h1 class="sphere-title">Agile Business Structure</h1>
+                    <p class="sphere-subtitle">Click a section or press SPACE to begin</p>
+                </div>
+                <div class="sphere-sections" id="sphere-sections">
+                    <!-- Sphere section labels populated by JS -->
+                </div>
+            </div>
+
+            <!-- Linear Mode Container -->
+            <div class="slides-container hidden" id="slides-container">
+                <!-- Slides populated by JavaScript -->
+            </div>
+
+            <!-- Quick Jump Menu -->
+            <div class="quick-jump-overlay hidden" id="quick-jump-overlay">
+                <div class="quick-jump-modal">
+                    <div class="quick-jump-header">
+                        <h2>Quick Jump</h2>
+                        <button class="quick-jump-close" id="quick-jump-close" aria-label="Close">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="quick-jump-grid" id="quick-jump-grid">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                    <div class="quick-jump-backup">
+                        <h3>Backup Slides</h3>
+                        <div class="quick-jump-backup-grid" id="quick-jump-backup-grid">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation Bar -->
+        <footer class="bottom-bar">
+            <div class="bottom-bar-left">
+                <button id="btn-prev" class="nav-btn" aria-label="Previous Slide">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    <span>Previous</span>
+                </button>
+            </div>
+            
+            <div class="bottom-bar-center">
+                <button id="btn-timer-toggle" class="control-btn" aria-label="Toggle Timer">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </button>
+                <button id="btn-quick-jump" class="control-btn" aria-label="Quick Jump">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="bottom-bar-right">
+                <button id="btn-next" class="nav-btn nav-btn-primary" aria-label="Next Slide">
+                    <span>Next</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </footer>
+
+        <!-- Help Modal -->
+        <div class="help-modal hidden" id="help-modal">
+            <div class="help-modal-content">
+                <div class="help-modal-header">
+                    <h2>Keyboard Shortcuts</h2>
+                    <button class="help-modal-close" id="help-modal-close" aria-label="Close">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="shortcuts-grid">
+                    <div class="shortcut-group">
+                        <h3>Navigation</h3>
+                        <div class="shortcut"><kbd>Space</kbd> / <kbd>→</kbd> Next slide</div>
+                        <div class="shortcut"><kbd>←</kbd> / <kbd>Backspace</kbd> Previous slide</div>
+                        <div class="shortcut"><kbd>Home</kbd> First slide</div>
+                        <div class="shortcut"><kbd>End</kbd> Last slide</div>
+                        <div class="shortcut"><kbd>1</kbd>-<kbd>9</kbd> Jump to slide</div>
+                    </div>
+                    <div class="shortcut-group">
+                        <h3>Modes</h3>
+                        <div class="shortcut"><kbd>S</kbd> Toggle Sphere/Linear mode</div>
+                        <div class="shortcut"><kbd>J</kbd> Open Quick Jump menu</div>
+                        <div class="shortcut"><kbd>M</kbd> Toggle mini-map sidebar</div>
+                    </div>
+                    <div class="shortcut-group">
+                        <h3>Controls</h3>
+                        <div class="shortcut"><kbd>F</kbd> Toggle fullscreen</div>
+                        <div class="shortcut"><kbd>T</kbd> Toggle timer</div>
+                        <div class="shortcut"><kbd>P</kbd> Presenter notes</div>
+                        <div class="shortcut"><kbd>B</kbd> Static backup mode</div>
+                        <div class="shortcut"><kbd>?</kbd> Show this help</div>
+                        <div class="shortcut"><kbd>Esc</kbd> Close modals / Exit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/slideContent.js"></script>
+    <script src="js/sphere.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/keyboard.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
