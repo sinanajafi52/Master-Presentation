@@ -41,22 +41,32 @@ class SphereVisualization {
             return;
         }
 
+        // Show labels immediately as fallback (will be updated when WebGL loads)
+        this.showSectionLabels();
+
         // Check WebGL support
         if (!this.checkWebGLSupport()) {
             this.container.classList.add('no-webgl');
+            console.warn('WebGL not supported - using CSS fallback');
             return;
         }
 
-        this.createScene();
-        this.createSphere();
-        this.createSectionMarkers();
-        this.createParticles();
-        this.createLights();
-        this.setupEventListeners();
-        this.animate();
+        try {
+            this.createScene();
+            this.createSphere();
+            this.createSectionMarkers();
+            this.createParticles();
+            this.createLights();
+            this.setupEventListeners();
+            this.animate();
 
-        // Show section labels after a delay
-        setTimeout(() => this.showSectionLabels(), 1500);
+            // Mark container as ready
+            this.container.classList.add('webgl-ready');
+            console.log('🌐 3D Sphere initialized successfully');
+        } catch (error) {
+            console.error('Failed to initialize 3D sphere:', error);
+            this.container.classList.add('no-webgl');
+        }
     }
 
     checkWebGLSupport() {
@@ -373,10 +383,10 @@ class SphereVisualization {
 
             labelsContainer.appendChild(label);
 
-            // Add visible class with delay
-            setTimeout(() => {
+            // Add visible class immediately (no delay needed)
+            requestAnimationFrame(() => {
                 label.classList.add('visible');
-            }, 100 * (index + 1));
+            });
         });
     }
 

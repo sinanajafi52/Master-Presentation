@@ -31,7 +31,7 @@ class PresentationApp {
             }
 
             // Small delay for smooth loading experience
-            await this.delay(500);
+            await this.delay(200);
 
             // Initialize modules
             this.initNavigation();

@@ -108,7 +108,7 @@
     color: var(--color-text-primary);
     opacity: 0;
     transform: scale(0.9);
-    transition: all var(--transition-normal);
+    transition: all 0.3s ease;
     pointer-events: auto;
     cursor: pointer;
 }
@@ -193,27 +193,27 @@
 }
 
 .sphere-section-label:nth-child(1).visible {
-    animation: fadeInLabel 0.5s ease 0.2s both;
+    animation: fadeInLabel 0.3s ease 0.05s both;
 }
 
 .sphere-section-label:nth-child(2).visible {
-    animation: fadeInLabel 0.5s ease 0.4s both;
+    animation: fadeInLabel 0.3s ease 0.1s both;
 }
 
 .sphere-section-label:nth-child(3).visible {
-    animation: fadeInLabel 0.5s ease 0.6s both;
+    animation: fadeInLabel 0.3s ease 0.15s both;
 }
 
 .sphere-section-label:nth-child(4).visible {
-    animation: fadeInLabel 0.5s ease 0.8s both;
+    animation: fadeInLabel 0.3s ease 0.2s both;
 }
 
 .sphere-section-label:nth-child(5).visible {
-    animation: fadeInLabel 0.5s ease 1.0s both;
+    animation: fadeInLabel 0.3s ease 0.25s both;
 }
 
 .sphere-section-label:nth-child(6).visible {
-    animation: fadeInLabel 0.5s ease 1.2s both;
+    animation: fadeInLabel 0.3s ease 0.3s both;
 }
 
 @keyframes fadeInLabel {
