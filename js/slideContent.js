@@ -223,30 +223,30 @@ const SLIDES = [
         content: {
             type: 'comparison',
             headline: 'Key Discovery: Team Experience Matters More Than Framework Choice',
-            mainInsight: "The findings suggest that team members' prior agile experience contributes substantially more to agility outcomes (estimated 20-40× based on cross-case comparison) than the specific choice of framework",
-            multiplier: '20-40×',
-            multiplierNote: 'estimated based on cross-case comparison',
+            mainInsight: "The findings suggest that team members' prior agile experience contributes substantially more to agility outcomes than the specific choice of framework",
+            multiplier: 'Substantially',
+            multiplierNote: 'More Important',
             cases: [
                 {
-                    id: 'B',
-                    framework: 'Minimal Scrum',
+                    id: 'C',
+                    framework: 'No formal framework',
                     outcome: 'HIGH agility',
                     positive: true,
-                    reason: 'Founders with 10+ years agile experience',
-                    detail: 'Knew which practices to retain, which to drop'
+                    reason: 'Founder with 10+ years consulting experience',
+                    detail: 'Extracted principles from multiple methodologies'
                 },
                 {
                     id: 'F',
-                    framework: 'Full Kanban',
-                    outcome: 'STRUGGLED with coordination',
+                    framework: 'Full Scrum implementation',
+                    outcome: 'MEDIUM agility',
                     positive: false,
-                    reason: 'First-time founders learning agility concepts',
-                    detail: 'Over-relied on framework without internalized principles'
+                    reason: 'Comprehensive framework but newer to agile mindset',
+                    detail: 'Framework compliance without internalized principles'
                 }
             ],
             implication: 'Hire for agile mindset and experience, not just framework expertise'
         },
-        notes: 'This is counterintuitive - most people focus on framework choice. Cross-case comparison suggests experience is 20-40× more important!'
+        notes: 'Cases C and D achieved high agility without formal frameworks, while Case F with full Scrum achieved only medium agility. Experience appears to matter considerably more than methodology choice.'
     },
 
     // ===== SLIDE 8: Key Finding #3 - Critical 6-8 Person Threshold =====
@@ -433,10 +433,10 @@ const SLIDES = [
             ],
             futureResearch: [
                 'Longitudinal studies tracking startups through critical threshold',
-                'Quantitative validation of 20-40× experience multiplier',
+                'Quantitative validation of experience-framework contribution differential',
                 'Extension to other European institutional contexts',
                 'Team member perspective studies',
-                'Larger sample for statistical validation'
+                'Larger sample for statistical generalization'
             ]
         },
         notes: 'Be honest about limitations - this shows academic maturity. Frame future research positively.'
@@ -457,7 +457,7 @@ const SLIDES = [
                 'Contributes to organizational agility theory by examining micro-enterprises (2-10 employees)',
                 'Integrates Dynamic Capabilities + Complexity Leadership + Contingency theories',
                 'Identifies and validates critical 6-8 person threshold with mathematical proof',
-                'Suggests team experience contributes substantially more (estimated 20-40×) than framework choice'
+                'Suggests team experience contributes substantially more to agility outcomes than framework choice'
             ],
             practical: [
                 'Five-layer framework for designing adaptive, scalable micro-enterprises',
