@@ -140,13 +140,13 @@ const SLIDES = [
             approach: 'Interpretivist Qualitative Multi-Case Study',
             sampling: 'Maximum Variation Sampling',
             cases: [
-                { id: 'A', sector: 'Railway Infrastructure', stage: 'Growth', size: 7, funding: 'EXIST' },
-                { id: 'B', sector: 'IoT Monitoring', stage: 'Pre-seed', size: 3, funding: 'Bootstrap' },
-                { id: 'C', sector: 'Management Consulting', stage: 'Growth', size: 8, funding: 'Bootstrap' },
-                { id: 'D', sector: 'Firefighting AI', stage: 'Early Growth', size: 10, funding: 'VC' },
-                { id: 'E', sector: 'SaaS Platform', stage: 'Pre-seed', size: 2, funding: 'Bootstrap' },
-                { id: 'F', sector: 'Medical Education AI', stage: 'Early Growth', size: 6, funding: 'EXIST' },
-                { id: 'G', sector: 'Sustainability Tech', stage: 'Pre-seed', size: 4, funding: 'Grant' }
+                { id: 'A', sector: 'Railway Infrastructure', stage: 'Early Scaling', size: 7, funding: 'VC/Investment' },
+                { id: 'B', sector: 'Water Quality Monitoring', stage: 'Early Growth', size: 2, funding: 'EXIST' },
+                { id: 'C', sector: 'Organizational Consulting', stage: 'Ramp-up', size: 5, funding: 'Strategic' },
+                { id: 'D', sector: 'Business Consulting', stage: 'Growth', size: 6, funding: 'Bootstrap' },
+                { id: 'E', sector: 'Autonomous Firefighting', stage: 'Pre-seed', size: 4, funding: 'EXIST' },
+                { id: 'F', sector: 'Software Development', stage: 'Growth', size: 5, funding: 'Self-funded' },
+                { id: 'G', sector: 'Medical AI (Radiology)', stage: 'Pre-seed', size: 4, funding: 'EXIST' }
             ],
             dataCollection: {
                 method: 'Semi-structured founder interviews',
@@ -274,9 +274,9 @@ const SLIDES = [
                     result: 'Informal coordination sufficient, high agility maintained'
                 },
                 above: {
-                    cases: ['A', 'D', 'F'],
-                    size: '7-10 people',
-                    result: 'Coordination challenges emerged; agility declined without proactive intervention'
+                    cases: ['A', 'C', 'D', 'F'],
+                    size: '5-7 people',
+                    result: 'Coordination challenges emerged; required proactive structural intervention'
                 }
             },
             actionableInsight: 'Founders must anticipate this threshold and implement selective structural mechanisms BEFORE reaching 6-8 employees'
@@ -483,13 +483,13 @@ const BACKUP_SLIDES = [
         content: {
             type: 'case-profiles',
             cases: [
-                { id: 'A', sector: 'Railway Infrastructure', stage: 'Growth', size: 7, funding: 'EXIST', challenge: 'Regulatory compliance', agility: 'Medium-High' },
-                { id: 'B', sector: 'IoT Monitoring', stage: 'Pre-seed', size: 3, funding: 'Bootstrap', challenge: 'Resource constraints', agility: 'High' },
-                { id: 'C', sector: 'Management Consulting', stage: 'Growth', size: 8, funding: 'Bootstrap', challenge: 'Remote coordination', agility: 'Medium' },
-                { id: 'D', sector: 'Firefighting AI', stage: 'Early Growth', size: 10, funding: 'VC', challenge: 'Rapid scaling pressure', agility: 'Medium' },
-                { id: 'E', sector: 'SaaS Platform', stage: 'Pre-seed', size: 2, funding: 'Bootstrap', challenge: 'Product-market fit', agility: 'High' },
-                { id: 'F', sector: 'Medical Education AI', stage: 'Early Growth', size: 6, funding: 'EXIST', challenge: 'Medical regulations', agility: 'Low-Medium' },
-                { id: 'G', sector: 'Sustainability Tech', stage: 'Pre-seed', size: 4, funding: 'Grant', challenge: 'Grant requirements', agility: 'Medium-High' }
+                { id: 'A', sector: 'Railway Infrastructure', stage: 'Early Scaling', size: 7, funding: 'Investment', challenge: 'Regulatory compliance', agility: '5/10 (was higher)' },
+                { id: 'B', sector: 'Water Quality Monitoring', stage: 'Early Growth', size: 2, funding: 'EXIST', challenge: 'Resource constraints', agility: 'High' },
+                { id: 'C', sector: 'Organizational Consulting', stage: 'Ramp-up', size: 5, funding: 'Strategic', challenge: 'Matrix coordination', agility: 'High' },
+                { id: 'D', sector: 'Business Consulting', stage: 'Growth', size: 6, funding: 'Bootstrap', challenge: 'Project-based scaling', agility: 'High' },
+                { id: 'E', sector: 'Autonomous Firefighting', stage: 'Pre-seed', size: 4, funding: 'EXIST', challenge: 'Technical complexity', agility: 'Medium' },
+                { id: 'F', sector: 'Software Development', stage: 'Growth', size: 5, funding: 'Self-funded', challenge: 'Multi-sector clients', agility: 'Medium' },
+                { id: 'G', sector: 'Medical AI (Radiology)', stage: 'Pre-seed', size: 4, funding: 'EXIST', challenge: 'Medical regulations', agility: 'High' }
             ]
         }
     },
@@ -538,13 +538,13 @@ const BACKUP_SLIDES = [
             type: 'matrix',
             dimensions: ['Trust Level', 'Learning Orientation', 'Leadership Style', 'Framework Usage', 'Threshold Awareness', 'Agility Outcome'],
             cases: {
-                'A': ['High', 'High', 'Servant', 'Adapted Scrum', 'Proactive', 'Medium-High'],
-                'B': ['High', 'High', 'Servant', 'Minimal', 'N/A', 'High'],
-                'C': ['Medium', 'Medium', 'Mixed', 'Custom Hybrid', 'Reactive', 'Medium'],
-                'D': ['High', 'High', 'Servant', 'Scrum+Kanban', 'Learning', 'Medium'],
-                'E': ['High', 'High', 'Collaborative', 'None Formal', 'N/A', 'High'],
-                'F': ['Medium', 'Low', 'Directive', 'Full Kanban', 'Unaware', 'Low-Medium'],
-                'G': ['High', 'Medium', 'Servant', 'Minimal', 'N/A', 'Medium-High']
+                'A': ['High', 'High', 'Servant', 'Adapted OKR+Scrum', 'Proactive', '5/10 (was higher)'],
+                'B': ['High', 'High', 'Servant', 'Adapted Scrum', 'N/A (2 people)', 'High'],
+                'C': ['High', 'High', 'Servant', 'Custom Matrix', 'Aware', 'High'],
+                'D': ['High', 'High', 'Servant', 'Project-based', 'Learning', 'High'],
+                'E': ['High', 'High', 'Collaborative', 'Minimal', 'N/A (4 people)', 'Medium'],
+                'F': ['Medium', 'Medium', 'Semi-agile', 'Full Scrum', 'Unaware', 'Medium'],
+                'G': ['High', 'High', 'Servant', 'Minimal', 'N/A (4 people)', 'High']
             }
         }
     }
