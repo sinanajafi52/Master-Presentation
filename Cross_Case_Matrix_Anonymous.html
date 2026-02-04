@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross-Case Comparison Matrix - Agile Startup Organizations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 28px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        h2 {
+            color: #2980b9;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 22px;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+            font-size: 13px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        th {
+            padding: 15px 10px;
+            text-align: left;
+            font-weight: 600;
+            border: 1px solid #5a67d8;
+            font-size: 12px;
+        }
+        
+        th:first-child {
+            width: 180px;
+            background: rgba(0,0,0,0.1);
+        }
+        
+        td {
+            padding: 12px 10px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+        
+        td:first-child {
+            font-weight: 600;
+            background: #f8f9fa;
+            color: #2c3e50;
+        }
+        
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tbody tr:hover {
+            background-color: #e8f4f8;
+            transition: background-color 0.3s;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            font-weight: 600;
+        }
+        
+        .section-note {
+            background: #e3f2fd;
+            padding: 15px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+            font-style: italic;
+            color: #1565c0;
+        }
+        
+        .legend {
+            background: #f1f8e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .legend h3 {
+            color: #558b2f;
+            margin-bottom: 10px;
+        }
+        
+        .legend ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .legend li {
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .legend li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            table {
+                page-break-inside: auto;
+            }
+            tr {
+                page-break-inside: avoid;
+                page-break-after: auto;
+            }
+        }
+        
+        @media (max-width: 1200px) {
+            .container {
+                padding: 20px;
+            }
+            table {
+                font-size: 11px;
+            }
+            th, td {
+                padding: 8px 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cross-Case Comparison Matrix</h1>
+        <p class="subtitle">Organizational Agility in Startup Contexts: Seven Case Studies</p>
+        
+        <div class="legend">
+            <h3>📊 How to Use This Matrix</h3>
+            <ul>
+                <li><strong>Compare horizontally</strong> to see how each startup addresses the same dimension</li>
+                <li><strong>Compare vertically</strong> to understand a single startup's profile</li>
+                <li><strong>Look for patterns</strong> across similar stages, sizes, or sectors</li>
+                <li><strong>Use in thesis</strong> as Table 5.8.x in Chapter 5.8 (Cross-Case Synthesis)</li>
+            </ul>
+        </div>
+
+        <!-- Table 1: Master Overview -->
+        <h2>Table 1: Master Comparison Overview</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dimension</th>
+                    <th>Case A</th>
+                    <th>Case B</th>
+                    <th>Case C</th>
+                    <th>Case D</th>
+                    <th>Case E</th>
+                    <th>Case F</th>
+                    <th>Case G</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Founder(s)</td>
+                    <td>Founder of Case A (CEO, co-founder)</td>
+                    <td>2 co-founders (anonymous)</td>
+                    <td>Founder of Case C (CEO, ~60% owner)</td>
+                    <td>Founder of Case D (co-founder, consultant)</td>
+                    <td>4 co-founders (including 2 lead founders)</td>
+                    <td>Founder of Case F (CEO, developer → PO → CEO)</td>
+                    <td>Founder of Case G + 3 co-founders</td>
+                </tr>
+                <tr>
+                    <td>Founded</td>
+                    <td>2020</td>
+                    <td>2021 (UG: 2023)</td>
+                    <td>Early 2024</td>
+                    <td>April 2020 (pandemic)</td>
+                    <td>2022 (not incorporated)</td>
+                    <td>~2018</td>
+                    <td>Late 2023 (work: Spring 2023)</td>
+                </tr>
+                <tr>
+                    <td>Team Size</td>
+                    <td>7 people</td>
+                    <td>2 founders, 0 employees</td>
+                    <td>2-5 people</td>
+                    <td>4-6 per project (core ~6)</td>
+                    <td>4 founders, 0 employees</td>
+                    <td>4-6 per team</td>
+                    <td>4 founders, 0 employees</td>
+                </tr>
+                <tr>
+                    <td>Sector/Industry</td>
+                    <td>Railway infrastructure (deep-tech monitoring)</td>
+                    <td>Water quality monitoring & ecological analytics</td>
+                    <td>Organizational transformation consulting</td>
+                    <td>Business consulting & technical planning (SMEs)</td>
+                    <td>Autonomous firefighting for recycling facilities</td>
+                    <td>Software (automotive, charity, healthcare)</td>
+                    <td>Medical tech education (AI for radiology)</td>
+                </tr>
+                <tr>
+                    <td>Development Stage</td>
+                    <td>Early scaling (pre-PMF)</td>
+                    <td>Early growth (post-PoC)</td>
+                    <td>Ramp-up / early growth</td>
+                    <td>Growth (organic, gradual)</td>
+                    <td>Pre-seed (prototype development)</td>
+                    <td>Growth phase</td>
+                    <td>Pre-seed (MVP → validation)</td>
+                </tr>
+                <tr>
+                    <td>Primary Funding</td>
+                    <td>First investment round</td>
+                    <td>Government grants (EXIST)</td>
+                    <td>Founders + strategic investors</td>
+                    <td>Bootstrapped + occasional angel</td>
+                    <td>EXIST scholarship (won TUniCorn)</td>
+                    <td>Service projects (self-funded)</td>
+                    <td>EXIST grant</td>
+                </tr>
+                <tr>
+                    <td>Organizational Structure</td>
+                    <td>4 pillars: product, finance/marketing, manufacturing, software</td>
+                    <td>Flat (2-person consensus)</td>
+                    <td>Matrix: Sales Base, Home Base, + clusters</td>
+                    <td>Project-based with project leaders</td>
+                    <td>Flat (thematic: tech vs. sales)</td>
+                    <td>Semi-agile: Scrum teams + centralized admin</td>
+                    <td>Flat (asynchronous coordination)</td>
+                </tr>
+                <tr class="highlight">
+                    <td>Agility Self-Rating</td>
+                    <td>5/10 (was higher in first 2 years)</td>
+                    <td>High (adapted Scrum works well)</td>
+                    <td>High (matrix enables rapid pivoting)</td>
+                    <td>High (family-style flexibility)</td>
+                    <td>Medium (informal, will formalize)</td>
+                    <td>Medium ("semi-agile", "not yet fully agile")</td>
+                    <td>High (minimal ceremony, fast iteration)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Table 2: Organizational Design -->
+        <h2>Table 2: Organizational Design & Structure</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dimension</th>
+                    <th>Case A</th>
+                    <th>Case B</th>
+                    <th>Case C</th>
+                    <th>Case D</th>
+                    <th>Case E</th>
+                    <th>Case F</th>
+                    <th>Case G</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Formal Structure</td>
+                    <td>4 functional pillars with designated team leads</td>
+                    <td>Scrum-like (2-week sprints, ceremonies adapted)</td>
+                    <td>Matrix: Sales Base, Home Base, + domain clusters</td>
+                    <td>Project leader per client engagement</td>
+                    <td>Thematic division (tech vs. sales/marketing)</td>
+                    <td>Product teams (Scrum) + centralized HR/finance</td>
+                    <td>No formal structure (asynchronous collaboration)</td>
+                </tr>
+                <tr>
+                    <td>Decision-Making</td>
+                    <td>CEO for external impact; pillar leads for domain</td>
+                    <td>Consensus between 2 equal founders</td>
+                    <td>Balanced: clusters decide locally; mgmt for cross-cutting</td>
+                    <td>Decentralized to project level + 6-eyes peer review</td>
+                    <td>Centralized among 4 founders (weekly meetings)</td>
+                    <td>Technical: teams; Admin/HR/finance: CEO (legal requirement)</td>
+                    <td>Domain-based among founders (weekly planning coordination)</td>
+                </tr>
+                <tr>
+                    <td>Coordination Mechanisms</td>
+                    <td>Weekly/bi-weekly catch-ups; simple sign-off forms</td>
+                    <td>Sprint planning, stand-ups, retros (shortened for 2)</td>
+                    <td>Cluster meetings + OKRs for alignment</td>
+                    <td>Digital boards (Trello); peer review; WhatsApp/chat</td>
+                    <td>Weekly planning with all 4 founders present</td>
+                    <td>Scrum ceremonies + OKRs (piloting)</td>
+                    <td>Asynchronous via Slack/Notion/Trello; weekly planning</td>
+                </tr>
+                <tr>
+                    <td>Role Fluidity</td>
+                    <td>Defined pillar leads, some inter-pillar flexibility</td>
+                    <td>Highly fluid (2 people share everything)</td>
+                    <td>High (matrix allows reassignment across clusters)</td>
+                    <td>Moderate (specialists hired per project needs)</td>
+                    <td>High among founders; will formalize with employees</td>
+                    <td>Moderate (PO roles defined; dev team roles fluid)</td>
+                    <td>High among founders (domain expertise guides)</td>
+                </tr>
+                <tr>
+                    <td>Hierarchy Level</td>
+                    <td>Moderate (pillar leads → CEO)</td>
+                    <td>None (flat, equal partners)</td>
+                    <td>Low (cluster heads → management team)</td>
+                    <td>Low (project leaders; family-style)</td>
+                    <td>None (flat; one external representative without authority)</td>
+                    <td>Moderate (PO → CEO for admin/finance)</td>
+                    <td>None (flat, 4 co-founders)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Table 3: Agile Practices -->
+        <h2>Table 3: Agile Practices & Framework Implementation</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dimension</th>
+                    <th>Case A</th>
+                    <th>Case B</th>
+                    <th>Case C</th>
+                    <th>Case D</th>
+                    <th>Case E</th>
+                    <th>Case F</th>
+                    <th>Case G</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Primary Framework(s)</td>
+                    <td>Scrum + OKR blend</td>
+                    <td>Scrum (modified for 2 people)</td>
+                    <td>Spotify-inspired matrix + OKR</td>
+                    <td>Custom (explicitly rejects formal frameworks)</td>
+                    <td>Scrum + Kanban hybrid</td>
+                    <td>Scrum + OKR (piloting)</td>
+                    <td>Scrum/Kanban principles (minimal ceremony)</td>
+                </tr>
+                <tr>
+                    <td>Sprint Length</td>
+                    <td>2 weeks (implied from OKR quarterly alignment)</td>
+                    <td>2 weeks</td>
+                    <td>Varies by cluster and project type</td>
+                    <td>Project-based (not sprints)</td>
+                    <td>2 weeks (when used; informal at 4 people)</td>
+                    <td>Standard Scrum (2 weeks typical)</td>
+                    <td>Informal (no fixed sprints at founder stage)</td>
+                </tr>
+                <tr>
+                    <td>Ceremonies Used</td>
+                    <td>Planning, catch-ups, ad hoc coordination, OKR reviews</td>
+                    <td>Planning, stand-ups, retros (all shortened/adapted)</td>
+                    <td>Cluster meetings, cross-cluster coordination, OKR reviews</td>
+                    <td>Project kickoffs, peer reviews, semi-annual retros</td>
+                    <td>Weekly planning meeting (all founders)</td>
+                    <td>Full Scrum ceremonies (planning, daily, review, retro)</td>
+                    <td>Weekly planning only (asynchronous rest of week)</td>
+                </tr>
+                <tr>
+                    <td>Framework Modifications</td>
+                    <td>OKRs for quarterly alignment across pillars; Scrum at team level</td>
+                    <td>Shortened ceremonies; omit planning poker; adapted to 2-person scale</td>
+                    <td>Matrix structure replaces Spotify squads/tribes; customized OKR cascade</td>
+                    <td>Rejected all formal frameworks; built custom around project leaders</td>
+                    <td>Shortened ceremonies for 4 people; no employees yet to fully implement</td>
+                    <td>OKRs experimental (piloting); admin functions not agile (legal constraint)</td>
+                    <td>Minimal ceremony to reduce overhead; pragmatic feature focus</td>
+                </tr>
+                <tr>
+                    <td>Scaling Framework Considered?</td>
+                    <td>Aware of Scrum@Scale, SAFe, Spotify; monitors but doesn't adopt</td>
+                    <td>No (too small; 2 people)</td>
+                    <td>Studied all three (Scrum@Scale, SAFe, Spotify); extracts principles only</td>
+                    <td>No (deliberately stays small to avoid needing frameworks)</td>
+                    <td>Aware of frameworks; planning style guide for customizations</td>
+                    <td>Yes (considering style guide to codify Scrum adaptations)</td>
+                    <td>No (planning style guide for when employees join)</td>
+                </tr>
+                <tr>
+                    <td>Digital Tools Used</td>
+                    <td>HubSpot (CRM), Slack, MATLAB, online banking (paper required by tax authorities)</td>
+                    <td>Tiger → Trello → custom → back to Tiger (tool odyssey; cost constraints)</td>
+                    <td>SharePoint, MS Teams, digital boards per cluster (multi-tool approach)</td>
+                    <td>Trello (project mgmt), Slack, digital notes (simple, accessible)</td>
+                    <td>Dropbox, OneNote; experimented with Tiger/MeisterTask (too complex for 4)</td>
+                    <td>Jira (project mgmt), MS Viva Goals (trial for OKRs)</td>
+                    <td>Slack, Notion, Trello (simple; plan professional tools when scaling)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Table 4: Cultural Foundations -->
+        <h2>Table 4: Cultural Foundations & Values</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dimension</th>
+                    <th>Case A</th>
+                    <th>Case B</th>
+                    <th>Case C</th>
+                    <th>Case D</th>
+                    <th>Case E</th>
+                    <th>Case F</th>
+                    <th>Case G</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Organizational Culture</td>
+                    <td>Collaborative, informal, pillar-based specialization</td>
+                    <td>Appreciative, efficient, flexible task handling</td>
+                    <td>Open, results-oriented, OKR-driven, high accountability</td>
+                    <td>Family-like, remote-first, trust-based, appreciation-focused</td>
+                    <td>Trust, self-management (roots in student projects)</td>
+                    <td>Flat, open communication, results-oriented</td>
+                    <td>Pragmatic, feature-focused, asynchronous, minimal ceremony</td>
+                </tr>
+                <tr>
+                    <td>Psychological Safety</td>
+                    <td>Unrestricted feedback encouraged; friendly environment; empower managers</td>
+                    <td>High (2 founders, appreciative culture, mistakes = learning)</td>
+                    <td>Central to transformational leadership; employees safe to decide</td>
+                    <td>High (family culture; treats employees like artists needing freedom)</td>
+                    <td>High trust from student project collaboration; replicate that trust</td>
+                    <td>Trust-based, delegative leadership; hires for cultural fit over skills</td>
+                    <td>Leading by example; delegation with trust; results over process</td>
+                </tr>
+                <tr>
+                    <td>Learning Orientation</td>
+                    <td>Regular restructuring of flows based on learning; retros; was more agile initially</td>
+                    <td>Retrospectives, trend reviews, client discussions inform both product & process</td>
+                    <td>"Learning competence" essential for adaptation; consulting = continuous learning</td>
+                    <td>Semi-annual retreats (workshops + social); project retros; peer review feedback</td>
+                    <td>Experimental mindset; learning by doing; university agile training foundation</td>
+                    <td>Scrum retros at project level + OKR piloting at org level; experiments with alignment</td>
+                    <td>Rapid iteration; beta as learning lab (20 users); tight feedback loops</td>
+                </tr>
+                <tr>
+                    <td>Resistance to Change</td>
+                    <td>Little internal resistance; external customers hesitant (rail sector conservatism)</td>
+                    <td>Minimal (young team open to agile methods from start; scheduling conflicts only)</td>
+                    <td>Little (transformation is the business; structural changes cause minor friction)</td>
+                    <td>Minimal (family culture values flexibility; training helps new members)</td>
+                    <td>Minimal (founders aligned on agile values; some tool/process reluctance)</td>
+                    <td>Little internal; larger orgs have middle-mgmt resistance (external observation)</td>
+                    <td>Little within startup; notes hybrid models needed in larger organizations</td>
+                </tr>
+                <tr>
+                    <td>Core Values Emphasized</td>
+                    <td>Flexibility, open communication, delegation, optimal agility balance</td>
+                    <td>Consistency in framework, participation, habituation to agile practices</td>
+                    <td>Purpose, psychological safety, empowerment, continuous learning</td>
+                    <td>Trust, appreciation, responsibility, well-being (weekend retreats), freedom with duty</td>
+                    <td>Trust, avoid micromanagement, experimentation, cross-functional collaboration</td>
+                    <td>Agile Manifesto principles (ask candidates about it), interpersonal over tools</td>
+                    <td>Results over process, minimize bureaucracy, start building & iterate quickly</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Table 5: Leadership -->
+        <h2>Table 5: Leadership Approaches & Management Philosophy</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dimension</th>
+                    <th>Case A</th>
+                    <th>Case B</th>
+                    <th>Case C</th>
+                    <th>Case D</th>
+                    <th>Case E</th>
+                    <th>Case F</th>
+                    <th>Case G</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Leadership Style</td>
+                    <td>Delegating authority; trusting team leads; flexibility & open communication</td>
+                    <td>Collaborative (co-learning); retrospectives; learning from others</td>
+                    <td>Transformational / servant leadership; focus on psychological safety</td>
+                    <td>Servant (flexible hours, personal responsibility); treat employees like artists</td>
+                    <td>Servant (no micromanagement); encourage team to propose solutions</td>
+                    <td>Trust-based, delegative (technical); centralized where legally required (admin)</td>
+                    <td>Lead by example; delegate authority; open communication; results focus</td>
+                </tr>
+                <tr>
+                    <td>Empowerment Level</td>
+                    <td>Pillar leads decide within domains without constant approval</td>
+                    <td>High (equal partners, consensus-based, both contribute across all areas)</td>
+                    <td>High (cluster heads accountable for development/innovation in domain)</td>
+                    <td>High (responsible individuals + peer review ensures quality without hierarchy)</td>
+                    <td>High (domain experts decide; weekly alignment ensures coherence)</td>
+                    <td>Moderate (PO autonomy in backlog/features; CEO retains admin/finance/HR)</td>
+                    <td>High (domain-based delegation with trust; founders self-organize)</td>
+                </tr>
+                <tr>
+                    <td>Results vs. Process Orientation</td>
+                    <td>Balance needed: cautions against excess agility diluting vision; seeks optimal level</td>
+                    <td>Consistency in framework + adaptation to context; embed agility through practice</td>
+                    <td>Results via OKRs; flexibility in methods; frameworks as boundaries enabling self-org</td>
+                    <td>Customer outcomes over methodology compliance; pragmatic tool use</td>
+                    <td>Deliver features & outcomes over strict process; agile = means not end</td>
+                    <td>Trust-based delegation; results focus; balance process adherence with delivery</td>
+                    <td>Results matter more than process adherence when trust exists; minimize ceremony</td>
+                </tr>
+                <tr>
+                    <td>Autonomy-Alignment Balance</td>
+                    <td>Pillar autonomy within strategic boundaries; weekly meetings align cross-pillar</td>
+                    <td>Consensus ensures alignment (2 people naturally stay aligned through communication)</td>
+                    <td>Matrix + OKRs align distributed decisions; clear goals guide autonomous action</td>
+                    <td>Peer review aligns; project leaders autonomous in execution within quality standards</td>
+                    <td>Weekly meetings align independent streams; technical founders have day-to-day autonomy</td>
+                    <td>Scrum teams nested in company OKRs; team autonomy in execution within broader goals</td>
+                    <td>Concise user stories + shared vision guide autonomous work; weekly touchpoint aligns</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Table 6: Challenges -->
+        <h2>Table 6: Challenges, Barriers & Constraints</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dimension</th>
+                    <th>Case A</th>
+                    <th>Case B</th>
+                    <th>Case C</th>
+                    <th>Case D</th>
+                    <th>Case E</th>
+                    <th>Case F</th>
+                    <th>Case G</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Primary Challenge</td>
+                    <td>Long feedback cycles in rail sector (years for commercial validation)</td>
+                    <td>Time management: ceremonies consume time vs. product development/clients</td>
+                    <td>Alignment overhead grows as matrix expands; more meetings & coordination needed</td>
+                    <td>Integrating new members without slowing ongoing project delivery or compromising quality</td>
+                    <td>Overhead of agile ceremonies for 4 people; time away from productive work</td>
+                    <td>Reconciling agile projects with centralized admin functions (tension/friction)</td>
+                    <td>Dividing tasks among 4 founders; limited resources; part-time hiring proved challenging</td>
+                </tr>
+                <tr>
+                    <td>Resource Constraints</td>
+                    <td>Cost barriers; limited resources; sophisticated tools unaffordable or unaccepted</td>
+                    <td>Tool affordability (enterprise platforms too costly); time as scarce resource</td>
+                    <td>Small team during ramp-up requires efficient allocation; can't do everything</td>
+                    <td>Modest scale limits capabilities; accepting this trade-off for flexibility & quality</td>
+                    <td>EXIST funding only; no employees; difficulty specializing roles with 4 founders</td>
+                    <td>Small teams view ceremonies as overhead when facing urgent deadlines</td>
+                    <td>EXIST grant; no employees; ideal team structures unaffordable at current scale</td>
+                </tr>
+                <tr>
+                    <td>Regulatory Burden</td>
+                    <td>Heavy (railway safety certifications; approval processes extend for months/years)</td>
+                    <td>Government funding compliance (EXIST reporting, milestones, record-keeping)</td>
+                    <td>Varies by sector: education (grant cycles), energy (safety), automotive (quality), mobility</td>
+                    <td>Low (SME consulting; commercial flexibility without heavy oversight)</td>
+                    <td>Emerging (autonomous systems; workplace safety standards; environmental regs)</td>
+                    <td>Automotive quality standards (ISO, supplier QMS); financial regs (Charity Move)</td>
+                    <td>Medical education standards (less stringent than medical devices)</td>
+                </tr>
+                <tr>
+                    <td>Feedback Cycle Length</td>
+                    <td>Years (rail procurement 2+ years; deployment/validation additional time)</td>
+                    <td>Customer deadlines conflict with sprint schedules; negotiation needed</td>
+                    <td>Varies widely: education (academic calendars), infrastructure (multi-year), automotive (annual)</td>
+                    <td>Weeks to months (consulting projects; rapid client feedback)</td>
+                    <td>Unpredictable (actual fire incidents needed for ultimate validation; sporadic)</td>
+                    <td>Automotive annual model cycles; fixed launch dates require delivery by deadlines</td>
+                    <td>Compact beta (20 users) accelerates cycles; trade-off: speed vs. representativeness</td>
+                </tr>
+                <tr>
+                    <td>Coordination Overhead</td>
+                    <td>Was more agile in first 2 years; complexity increased with projects/stakeholders</td>
+                    <td>Ceremonies feel like overhead at 2-person scale (everyone already knows everything)</td>
+                    <td>Matrix coordination grows combinatorially; need clear responsibility segregation</td>
+                    <td>Onboarding reduces existing team productivity (training, review, support investment)</td>
+                    <td>Meetings reduce productivity for 4-person team (informal communication might suffice)</td>
+                    <td>Admin overhead of ceremonies frustrates small teams (2 hours planning = substantial %)</td>
+                    <td>Overhead of ceremonies at 4-person scale; will provide value as team expands</td>
+                </tr>
+                <tr>
+                    <td>Structural Tensions</td>
+                    <td>Partial agility (5/10); employees experience ambiguity about decision escalation</td>
+                    <td>None (too small; anticipates tension with employees)</td>
+                    <td>Matrix complexity in accountability & authority; competing priorities across clusters</td>
+                    <td>None (deliberately simple; family consultancy model avoids corporate complexity)</td>
+                    <td>Anticipate tension between informal now vs. structured future with employees</td>
+                    <td>Semi-agile: Scrum teams operate on sprint cadence; admin operates on different timeline</td>
+                    <td>Anticipate tension as informal practices must become structured with growth</td>
+                </tr>
+                <tr>
+                    <td>External Stakeholder Conflicts</td>
+                    <td>Investors expect profitability but don't dictate methods; customers prefer traditional</td>
+                    <td>No private investors (EXIST only); customers sometimes demand fixed deadlines</td>
+                    <td>Limited investor influence (founders + strategic); clients vary in receptiveness</td>
+                    <td>No investor influence (bootstrapped); customers value speed & quality (aligned)</td>
+                    <td>No investors yet (EXIST only); recycling facilities vary in openness to innovation</td>
+                    <td>Service clients expect fixed scope/schedule; education needed about MVP/prototyping</td>
+                    <td>No investors (EXIST only); beta users provide feedback directly (collaborative)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Table 7: Scaling -->
+        <h2>Table 7: Scaling Mechanisms & Growth Management</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dimension</th>
+                    <th>Case A</th>
+                    <th>Case B</th>
+                    <th>Case C</th>
+                    <th>Case D</th>
+                    <th>Case E</th>
+                    <th>Case F</th>
+                    <th>Case G</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Scaling Strategy</td>
+                    <td>Cautious incremental process adjustment as complexity grows; avoid premature structure</td>
+                    <td>Plan to split tasks to keep team sizes manageable; maintain regular events & retros</td>
+                    <td>Continuous matrix refinement via 3-week test cycles; iterate based on results</td>
+                    <td>Deliberately stay small; reject growth requiring structure loss or quality compromise</td>
+                    <td>Regular check-ins planned; style guide to document customizations before scaling</td>
+                    <td>Prefer small product teams over large hierarchies; considering style guide for adaptations</td>
+                    <td>Regular check-ins; style guide planned; modular architecture enables flexibility</td>
+                </tr>
+                <tr>
+                    <td>Maintaining Agility While Growing</td>
+                    <td>Quarterly OKRs for alignment across pillars; regularly question if processes serve needs</td>
+                    <td>Anticipate adjustments but commit to preserving core agile principles as team grows</td>
+                    <td>Iterative org design (rapid pivot mid-year); apply agile principles to structure itself</td>
+                    <td>Every tool/process must serve team (human-centered); reject bureaucracy without clear value</td>
+                    <td>Document practices for preserving culture; modular team structure planned</td>
+                    <td>Codify Scrum adaptations to manage transitions from MVP → mature products</td>
+                    <td>Modular technical architecture provides foundation for organizational agility</td>
+                </tr>
+                <tr>
+                    <td>Geographic Distribution</td>
+                    <td>Distributed across pillars in Berlin area (specifics unclear from interview)</td>
+                    <td>Local (Germany); founders work closely together</td>
+                    <td>Primarily in-person now during ramp-up; plans for future distribution capability</td>
+                    <td>Fully remote across Germany; physical meetings semi-annually for alignment/bonding</td>
+                    <td>Local (university-based; TU Clausthal & Ostfalia); founders co-located currently</td>
+                    <td>Distributed teams within Germany (specifics unclear)</td>
+                    <td>Asynchronous work to accommodate founder schedules (remote-capable from start)</td>
+                </tr>
+                <tr>
+                    <td>Talent Acquisition Strategy</td>
+                    <td>Freelance trial → permanent hire (test fit before commitment); standard onboarding + training</td>
+                    <td>No employees yet; will maintain agile philosophy & Scrum standards when hiring</td>
+                    <td>Workshops + alignment meetings (every 3-6 months); hire specialists; ensure shared understanding</td>
+                    <td>Workshop-based onboarding; quarterly team alignment; specialists per project; peer review = training</td>
+                    <td>No employees yet; plan to involve candidates in ceremonies during interview process</td>
+                    <td>Hire for agile mindset (ask about Manifesto); cultural fit > technical skill</td>
+                    <td>Part-time hiring proved challenging (onboarding overhead vs. contribution); plan modular teams</td>
+                </tr>
+                <tr>
+                    <td>Future Scaling Plans</td>
+                    <td>Improve structure gradually based on learning; monitor frameworks but maintain bespoke approach</td>
+                    <td>Preserve Scrum ceremonies with team growth; split into manageable team sizes</td>
+                    <td>Continue matrix evolution; study scaling frameworks for principles (not wholesale adoption)</td>
+                    <td>Maintain small scale; human-centered approach; tools/processes serve team not vice versa</td>
+                    <td>Document customizations in style guide; consult experts if needed; modular structure</td>
+                    <td>Consider internal style guide clarifying Scrum adaptations; small teams over large hierarchies</td>
+                    <td>Style guide to specify deviations from standard Scrum; modular architecture + open communication</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Table 8: Innovation & Pivoting -->
+        <h2>Table 8: Innovation Examples & Pivoting Capability</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dimension</th>
+                    <th>Case A</th>
+                    <th>Case B</th>
+                    <th>Case C</th>
+                    <th>Case D</th>
+                    <th>Case E</th>
+                    <th>Case F</th>
+                    <th>Case G</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Major Pivot Example</td>
+                    <td>Changed product focus (Sept 2023) in response to customer feedback</td>
+                    <td>No major pivot yet; continuous iterative product improvements</td>
+                    <td>Reorganized matrix structure mid-year when recognizing feedback cycle slowdown</td>
+                    <td>Act as internal startup studio for clients; develop new business models & spin-offs</td>
+                    <td>Shifted technical platform from ground platform to different architecture</td>
+                    <td>Abandoned initial product idea after customer feedback; developed new MVP</td>
+                    <td>No major commercial pivot yet; technical & architectural changes via pro/con analysis</td>
+                </tr>
+                <tr>
+                    <td>Agility Enabler for Pivot</td>
+                    <td>OKR system enabled 9-10 month development of new product line using existing processes</td>
+                    <td>Iterative development methods allow responsive improvements based on feedback</td>
+                    <td>Willingness to test new structure over 3 weeks; assess; iterate; rapid org pivoting</td>
+                    <td>Iterative planning & rapid client feedback loops in consulting engagements</td>
+                    <td>Pro/con analysis + expert consultation + flexible mindset enabled complete platform change</td>
+                    <td>Early customer feedback integration; iterative development cycles; willingness to discard</td>
+                    <td>Pro/con analysis, expert consultation, rapid founder consensus among 4 co-founders</td>
+                </tr>
+                <tr>
+                    <td>Pivot Type</td>
+                    <td>Product focus change (customer-driven market feedback)</td>
+                    <td>N/A (continuous incremental improvement rather than discrete pivot)</td>
+                    <td>Organizational structure pivot (internal process change)</td>
+                    <td>Business model development (for clients; create new subsidiaries)</td>
+                    <td>Technical platform pivot (architecture change without business model change)</td>
+                    <td>Product/market pivot (abandoned product → new MVP → different market)</td>
+                    <td>Technical platform pivot (architecture but not business direction)</td>
+                </tr>
+                <tr>
+                    <td>Speed of Pivot Execution</td>
+                    <td>9-10 months (substantial product development timeline)</td>
+                    <td>N/A</td>
+                    <td>3 weeks for initial test; iterative refinement thereafter</td>
+                    <td>Project-based (weeks to months depending on client engagement scope)</td>
+                    <td>Rapid founder decision (4 people aligned quickly after analysis)</td>
+                    <td>Early stage enabled quick MVP shift (weeks to months)</td>
+                    <td>Rapid (4 founders with deep shared context decided fast)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Summary Table -->
+        <div class="section-note">
+            <strong>📊 Cross-Case Pattern Summary:</strong> The tables above reveal that organizational agility in startups is shaped by an interplay of team size, developmental stage, sector regulation, founder backgrounds, and resource availability. While all seven organizations embrace agile values (trust, learning, empowerment), they implement these values through diverse structural mechanisms and practices tailored to their specific contexts.
+        </div>
+
+        <h2>Key Patterns Across Cases</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pattern Category</th>
+                    <th>Observation</th>
+                    <th>Startups Exhibiting Pattern</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Universal Success Factors</strong></td>
+                    <td>Trust & psychological safety emphasized by all</td>
+                    <td>All 7 startups</td>
+                </tr>
+                <tr>
+                    <td><strong>Universal Success Factors</strong></td>
+                    <td>Learning orientation (retrospectives, iteration, experimentation)</td>
+                    <td>All 7 startups</td>
+                </tr>
+                <tr>
+                    <td><strong>Universal Success Factors</strong></td>
+                    <td>Servant/delegative leadership emphasized</td>
+                    <td>All 7 startups</td>
+                </tr>
+                <tr>
+                    <td><strong>Universal Success Factors</strong></td>
+                    <td>Results prioritized over strict process adherence</td>
+                    <td>All 7 startups</td>
+                </tr>
+                <tr>
+                    <td><strong>Universal Success Factors</strong></td>
+                    <td>Selective framework adoption (customize, don't copy wholesale)</td>
+                    <td>All 7 startups</td>
+                </tr>
+                <tr class="highlight">
+                    <td><strong>Common Challenge</strong></td>
+                    <td>Ceremony overhead at small scale (ceremonies consume disproportionate time)</td>
+                    <td>Cases B, E, F, G (4/7 = 57%)</td>
+                </tr>
+                <tr class="highlight">
+                    <td><strong>Common Challenge</strong></td>
+                    <td>Resource constraints limit tools, training, and infrastructure investment</td>
+                    <td>All 7 startups</td>
+                </tr>
+                <tr class="highlight">
+                    <td><strong>Common Challenge</strong></td>
+                    <td>Balancing growth with agility (erosion as complexity increases)</td>
+                    <td>Cases A, C, D, F (4/7 = 57%)</td>
+                </tr>
+                <tr class="highlight">
+                    <td><strong>Common Challenge</strong></td>
+                    <td>Tool limitations due to cost vs. capability trade-offs</td>
+                    <td>Cases A, B, E, G (4/7 = 57%)</td>
+                </tr>
+                <tr class="highlight">
+                    <td><strong>Common Challenge</strong></td>
+                    <td>Hybrid necessity (pure agility impossible due to legal, regulatory, stakeholder constraints)</td>
+                    <td>Cases A, F, C (explicit); all implicitly acknowledge hybridity</td>
+                </tr>
+                <tr>
+                    <td><strong>Stage-Related Pattern</strong></td>
+                    <td>Pre-seed startups favor minimal ceremony to maximize productive work</td>
+                    <td>Cases E, G</td>
+                </tr>
+                <tr>
+                    <td><strong>Stage-Related Pattern</strong></td>
+                    <td>Growth-phase startups invest more in coordination mechanisms (OKRs, formal meetings)</td>
+                    <td>Cases A, D, F</td>
+                </tr>
+                <tr>
+                    <td><strong>Sector-Related Pattern</strong></td>
+                    <td>Heavily regulated sectors (rail, automotive) necessitate hybrid agile-waterfall approaches</td>
+                    <td>Case A (railway), Case F (automotive)</td>
+                </tr>
+                <tr>
+                    <td><strong>Sector-Related Pattern</strong></td>
+                    <td>Consulting/service businesses leverage client work for organizational learning</td>
+                    <td>Cases C, D</td>
+                </tr>
+                <tr>
+                    <td><strong>Founder Background Pattern</strong></td>
+                    <td>Technical/research founders emphasize systematic experimentation</td>
+                    <td>Case A (PhD), Case E (robotics engineering)</td>
+                </tr>
+                <tr>
+                    <td><strong>Founder Background Pattern</strong></td>
+                    <td>Consulting/business founders bring structured frameworks from client work</td>
+                    <td>Cases C, D, F (product owner experience)</td>
+                </tr>
+                <tr>
+                    <td><strong>Founder Background Pattern</strong></td>
+                    <td>Academic founders maintain informal structures longer (student project norms)</td>
+                    <td>Cases B, E, G</td>
+                </tr>
+                <tr>
+                    <td><strong>Remote Work Pattern</strong></td>
+                    <td>Fully remote operations force explicit communication (becomes enabler)</td>
+                    <td>Case D (fully remote), Case G (asynchronous by design)</td>
+                </tr>
+                <tr>
+                    <td><strong>Agility Trajectory</strong></td>
+                    <td>Agility often higher in first 1-2 years before complexity increases</td>
+                    <td>Case A (explicitly noted), implied by others facing coordination challenges</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="section-note">
+            <strong>💡 Research Implications:</strong> This cross-case matrix demonstrates that (1) organizational agility is context-dependent rather than universal, (2) effective agile practice requires principled customization based on deep understanding rather than mechanical framework application, (3) cultural foundations prove more important than structural arrangements, and (4) hybrid models combining agile and traditional elements represent pragmatic necessity rather than failure.
+        </div>
+    </div>
+</body>
+</html>
