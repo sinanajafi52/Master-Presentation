@@ -277,7 +277,7 @@ class PresentationNavigation {
                             </div>
                         `).join('')}
                     </div>
-                    <div class="bullet-list" style="margin-left: 2rem; margin-top: 1rem;">
+                    <div class="bullet-list" style="margin-left: 2rem; margin-top: 0.25rem;">
                         ${content.challenges.map(c => `
                             <div class="bullet-item">
                                 <span class="bullet-icon">${c.icon}</span>
