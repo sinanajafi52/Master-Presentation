@@ -269,19 +269,11 @@ class PresentationNavigation {
                 
                 <div class="content-section" style="margin-bottom: 0.5rem;">
                     <h2 class="content-section-title" style="margin-bottom: 0.5rem;">The Problem</h2>
-                    <div class="bullet-list stagger-children" style="margin-bottom: 0.5rem;">
-                        ${content.problems.map(p => `
-                            <div class="bullet-item">
-                                <span class="bullet-icon">•</span>
-                                <span class="bullet-text">${p}</span>
-                            </div>
-                        `).join('')}
-                    </div>
-                    <div class="bullet-list" style="margin-left: 2rem; margin-top: 0;">
+                    <div class="bullet-list" style="margin-left: 0; margin-top: 0; gap: 1.5rem;">
                         ${content.challenges.map(c => `
-                            <div class="bullet-item">
-                                <span class="bullet-icon">${c.icon}</span>
-                                <span class="bullet-text">${c.text}</span>
+                            <div class="bullet-item" style="padding: 1rem; font-size: 1.3rem;">
+                                <span class="bullet-icon" style="font-size: 1.5rem;">${c.icon}</span>
+                                <span class="bullet-text" style="font-size: 1.3rem; line-height: 1.4;">${c.text}</span>
                             </div>
                         `).join('')}
                     </div>
