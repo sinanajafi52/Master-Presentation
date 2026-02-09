@@ -146,7 +146,7 @@ const SLIDES = [
                 { id: 'D', sector: 'Business Consulting', stage: 'Growth', size: 6, funding: 'Bootstrap' },
                 { id: 'E', sector: 'Autonomous Firefighting', stage: 'Pre-seed', size: 4, funding: 'EXIST' },
                 { id: 'F', sector: 'Software Development', stage: 'Growth', size: 5, funding: 'Self-funded' },
-                { id: 'G', sector: 'Medical AI (Radiology)', stage: 'Pre-seed', size: 4, funding: 'EXIST' }
+                { id: 'G', sector: 'Medical Education AI', stage: 'Pre-seed', size: 4, funding: 'EXIST' }
             ],
             dataCollection: {
                 method: 'Semi-structured founder interviews',
@@ -489,7 +489,7 @@ const BACKUP_SLIDES = [
                 { id: 'D', sector: 'Business Consulting', stage: 'Growth', size: 6, funding: 'Bootstrap', challenge: 'Project-based scaling', agility: 'High' },
                 { id: 'E', sector: 'Autonomous Firefighting', stage: 'Pre-seed', size: 4, funding: 'EXIST', challenge: 'Technical complexity', agility: 'Medium' },
                 { id: 'F', sector: 'Software Development', stage: 'Growth', size: 5, funding: 'Self-funded', challenge: 'Multi-sector clients', agility: 'Medium' },
-                { id: 'G', sector: 'Medical AI (Radiology)', stage: 'Pre-seed', size: 4, funding: 'EXIST', challenge: 'Medical regulations', agility: 'High' }
+                { id: 'G', sector: 'Medical Education AI', stage: 'Pre-seed', size: 4, funding: 'EXIST', challenge: 'Medical regulations', agility: 'High' }
             ]
         }
     },
