@@ -135,8 +135,8 @@
     font-size: var(--text-h3);
     font-weight: 600;
     color: var(--color-text-primary);
-    margin-bottom: var(--space-md);
-    padding-bottom: var(--space-sm);
+    margin-bottom: var(--space-xs);
+    padding-bottom: var(--space-xs);
     border-bottom: 2px solid rgba(99, 102, 241, 0.3);
 }
 
@@ -144,7 +144,7 @@
 .bullet-list {
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
+    gap: var(--space-xs);
 }
 
 .bullet-item {
