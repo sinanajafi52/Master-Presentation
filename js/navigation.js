@@ -267,9 +267,9 @@ class PresentationNavigation {
                     <small style="color: var(--color-text-muted); margin-top: 0.5rem;">${content.statistic.source}</small>
                 </div>
                 
-                <div class="content-section">
-                    <h2 class="content-section-title">The Problem</h2>
-                    <div class="bullet-list stagger-children">
+                <div class="content-section" style="margin-bottom: 0.5rem;">
+                    <h2 class="content-section-title" style="margin-bottom: 0.5rem;">The Problem</h2>
+                    <div class="bullet-list stagger-children" style="margin-bottom: 0.5rem;">
                         ${content.problems.map(p => `
                             <div class="bullet-item">
                                 <span class="bullet-icon">•</span>
@@ -277,7 +277,7 @@ class PresentationNavigation {
                             </div>
                         `).join('')}
                     </div>
-                    <div class="bullet-list" style="margin-left: 2rem; margin-top: 0.25rem;">
+                    <div class="bullet-list" style="margin-left: 2rem; margin-top: 0;">
                         ${content.challenges.map(c => `
                             <div class="bullet-item">
                                 <span class="bullet-icon">${c.icon}</span>
@@ -366,6 +366,14 @@ class PresentationNavigation {
     }
 
     getMethodologySlideContent(slide, content) {
+        const processFlow = content.analysis.processFlow || [
+            { step: 'Sampling', desc: 'Max Variation (7 Cases)' },
+            { step: 'Data Collection', desc: 'Semi-structured Interviews (445 min)' },
+            { step: 'Coding', desc: 'Reflexive Thematic Analysis (Manual)' },
+            { step: 'Synthesis', desc: 'Within-Case & Cross-Case Matrix' },
+            { step: 'Findings', desc: '5 Factors, 6 Principles, 5-Layer Framework' }
+        ];
+
         return `
             <div class="slide-header">
                 <span class="slide-section-tag ${slide.sectionColor}">Methodology</span>
@@ -423,6 +431,16 @@ class PresentationNavigation {
                             <p style="color: var(--color-text-muted); font-size: 0.9rem;">${content.analysis.coding}</p>
                         </div>
                     </div>
+                </div>
+
+                <div class="process-flow">
+                    ${processFlow.map((step, i) => `
+                        <div class="process-step">
+                            <div class="step-number">${i + 1}</div>
+                            <div class="step-title">${step.step}</div>
+                            <div class="step-desc">${step.desc}</div>
+                        </div>
+                    `).join('')}
                 </div>
             </div>
         `;
