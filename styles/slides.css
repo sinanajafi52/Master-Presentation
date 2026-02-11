@@ -308,8 +308,8 @@
 
 .venn-circle {
     position: absolute;
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -370,7 +370,7 @@
 }
 
 .venn-desc {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     color: var(--color-text-secondary);
 }
 
@@ -532,7 +532,7 @@
 
 .chart-container {
     position: relative;
-    height: 180px;
+    height: 220px;
     margin: var(--space-sm) 0;
 }
 

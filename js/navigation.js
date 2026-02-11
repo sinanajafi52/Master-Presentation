@@ -329,21 +329,21 @@ class PresentationNavigation {
                         <div>
                             <div class="venn-label">Dynamic Capabilities</div>
                             <div class="venn-desc">Explains HOW</div>
-                            <div class="venn-desc" style="margin-top: 0.5rem; font-size: 0.65rem;">Sensing → Seizing → Transforming</div>
+                            <div class="venn-desc" style="margin-top: 0.5rem;">Sensing → Seizing → Transforming</div>
                         </div>
                     </div>
                     <div class="venn-circle clt">
                         <div>
                             <div class="venn-label">Complexity Leadership</div>
                             <div class="venn-desc">Explains WHO</div>
-                            <div class="venn-desc" style="margin-top: 0.5rem; font-size: 0.65rem;">Adaptive + Enabling + Admin</div>
+                            <div class="venn-desc" style="margin-top: 0.5rem;">Adaptive + Enabling + Admin</div>
                         </div>
                     </div>
                     <div class="venn-circle contingency">
                         <div>
                             <div class="venn-label">Contingency Theory</div>
                             <div class="venn-desc">Explains WHY variation</div>
-                            <div class="venn-desc" style="margin-top: 0.5rem; font-size: 0.65rem;">Stage, Sector, Size, Funding</div>
+                            <div class="venn-desc" style="margin-top: 0.5rem;">Stage, Sector, Size, Funding</div>
                         </div>
                     </div>
                     <div class="venn-center">${content.centerLabel}</div>
