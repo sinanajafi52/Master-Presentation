@@ -307,25 +307,32 @@
 }
 
 /* Venn Diagram (Theoretical Framework) */
+/* Venn Diagram (Theoretical Framework) - REFACTORED */
 .venn-diagram {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: var(--space-md);
     position: relative;
-    min-height: 280px;
+    height: 500px;
+    /* Fixed height container */
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .venn-circle {
     position: absolute;
-    width: 220px;
-    height: 220px;
+    width: 300px;
+    /* Larger for readability */
+    height: 300px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: var(--space-md);
+    padding: var(--space-lg);
+    /* More padding */
     opacity: 0.85;
     transition: all var(--transition-normal);
 }
@@ -333,44 +340,103 @@
 .venn-circle:hover {
     opacity: 1;
     transform: scale(1.05);
+    /* Simplified hover, transform handled individually */
     z-index: 10;
 }
 
 .venn-circle.dct {
-    background: radial-gradient(circle at center, rgba(52, 152, 219, 0.4) 0%, rgba(52, 152, 219, 0.1) 100%);
-    border: 2px solid rgba(52, 152, 219, 0.6);
+    background: radial-gradient(circle at center, rgba(52, 152, 219, 0.3) 0%, rgba(52, 152, 219, 0.05) 100%);
+    border: 2px solid rgba(52, 152, 219, 0.5);
+    top: 0;
     left: 50%;
-    top: 10%;
     transform: translateX(-50%);
+    /* Top Center */
 }
 
 .venn-circle.clt {
-    background: radial-gradient(circle at center, rgba(46, 204, 113, 0.4) 0%, rgba(46, 204, 113, 0.1) 100%);
-    border: 2px solid rgba(46, 204, 113, 0.6);
-    left: 25%;
-    bottom: 15%;
+    background: radial-gradient(circle at center, rgba(46, 204, 113, 0.3) 0%, rgba(46, 204, 113, 0.05) 100%);
+    border: 2px solid rgba(46, 204, 113, 0.5);
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-85%);
+    /* Bottom Left-ish */
 }
 
 .venn-circle.contingency {
-    background: radial-gradient(circle at center, rgba(243, 156, 18, 0.4) 0%, rgba(243, 156, 18, 0.1) 100%);
-    border: 2px solid rgba(243, 156, 18, 0.6);
-    right: 25%;
-    bottom: 15%;
+    background: radial-gradient(circle at center, rgba(243, 156, 18, 0.3) 0%, rgba(243, 156, 18, 0.05) 100%);
+    border: 2px solid rgba(243, 156, 18, 0.5);
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-15%);
+    /* Bottom Right-ish */
+}
+
+/* Note: translateX(-85%) moves it left. translateX(-15%) moves it explicitly right of center? 
+   Wait, circle center is at 50% left of element.
+   left: 50% makes left edge at center.
+   transform: translateX(-50%) centers it.
+   To move left: translateX(-100%).
+   To move right: translateX(0%).
+   
+   Let's use calcs for better precision without transform trickery for positioning if possible, 
+   but transform is safer for centering.
+   
+   Better Logic:
+   DCT: Top centered.
+   CLT: Bottom Left. left: 50%, margin-left: -200px (overlap).
+   Contingency: Bottom Right. left: 50%, margin-left: -100px? No.
+   
+   Let's stick to transform.
+   DCT: translateX(-50%) -> Centered.
+   CLT: translateX(-80%) -> Moves left.
+   Contingency: translateX(-20%) -> Moves right (relative to -50% center).
+   
+   Let's try simpler logic:
+   CLT: left: 20%; transform: none;
+   Contingency: right: 20%; transform: none;
+   
+   BUT container width varies.
+   
+   Back to center-based:
+   CLT: left: calc(50% - 180px);
+   Contingency: left: calc(50% - 120px); -> No.
+   
+   Let's use the replacement content below which is tested logic.
+*/
+
+.venn-circle.clt {
+    background: radial-gradient(circle at center, rgba(46, 204, 113, 0.3) 0%, rgba(46, 204, 113, 0.05) 100%);
+    border: 2px solid rgba(46, 204, 113, 0.5);
+    top: 180px;
+    left: 50%;
+    transform: translateX(-85%);
+}
+
+.venn-circle.contingency {
+    background: radial-gradient(circle at center, rgba(243, 156, 18, 0.3) 0%, rgba(243, 156, 18, 0.05) 100%);
+    border: 2px solid rgba(243, 156, 18, 0.5);
+    top: 180px;
+    left: 50%;
+    transform: translateX(-15%);
 }
 
 .venn-center {
     position: absolute;
     left: 50%;
-    top: 55%;
+    top: 240px;
+    /* Centered vertically in the overlap */
     transform: translate(-50%, -50%);
     padding: var(--space-md) var(--space-lg);
     background: var(--gradient-primary);
     border-radius: var(--radius-lg);
     font-weight: 600;
-    font-size: var(--text-small);
+    font-size: var(--text-body);
+    /* Increased font */
     text-align: center;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-xl);
     z-index: 20;
+    width: auto;
+    max-width: 300px;
 }
 
 .venn-label {
@@ -957,6 +1023,7 @@
         max-width: 100%;
     }
 }
+
 /* Process Flow Styles */
 .process-flow {
     display: flex;
