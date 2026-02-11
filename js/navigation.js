@@ -305,10 +305,9 @@ class PresentationNavigation {
                 </div>
                 
                 <div class="sub-questions stagger-children">
-                    ${content.subQuestions.map((q, i) => `
+                    ${content.subQuestions.map(q => `
                         <div class="sub-question">
-                            <span class="sub-question-num">${i + 1}</span>
-                            <span class="sub-question-text">${q}</span>
+                            <span class="sub-question-text" style="font-weight: 500;">${q}</span>
                         </div>
                     `).join('')}
                 </div>
