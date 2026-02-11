@@ -571,6 +571,7 @@ img {
     flex: 1;
     margin-top: 46px;
     margin-bottom: 44px;
+    padding-left: 40px; /* Space for sidebar toggle */
     overflow: hidden;
     position: relative;
 }
