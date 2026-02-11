@@ -262,38 +262,48 @@
 .sub-questions {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-sm);
+    gap: var(--space-md);
     margin-top: var(--space-md);
 }
 
 .sub-question {
     display: flex;
     align-items: flex-start;
-    gap: var(--space-sm);
-    padding: var(--space-sm);
-    background: var(--color-bg-glass);
-    border-radius: var(--radius-md);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.04) 100%);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    transition: all var(--transition-fast);
+}
+
+.sub-question:hover {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.14) 0%, rgba(139, 92, 246, 0.08) 100%);
+    border-color: rgba(99, 102, 241, 0.4);
+    transform: translateY(-2px);
 }
 
 .sub-question-num {
     flex-shrink: 0;
-    width: 24px;
-    height: 24px;
+    min-width: 40px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-mono);
-    font-size: 0.7rem;
-    font-weight: 600;
+    font-size: 0.8rem;
+    font-weight: 700;
     color: var(--color-accent-light);
     background: rgba(99, 102, 241, 0.2);
     border-radius: var(--radius-sm);
+    letter-spacing: 0.02em;
 }
 
 .sub-question-text {
-    font-size: var(--text-small);
+    font-size: 1rem;
+    line-height: 1.5;
     color: var(--color-text-secondary);
+    font-weight: 400;
 }
 
 /* Venn Diagram (Theoretical Framework) */

@@ -74,10 +74,10 @@ const SLIDES = [
             type: 'question',
             mainQuestion: 'How can early-stage German startups (2-10 employees) design agile business structures that enable organizational adaptability, scalability, and long-term sustainability?',
             subQuestions: [
-                'Sub-RQ1: What constitutes organizational agility in early-stage startups vs. software agile methodologies?',
-                'Sub-RQ2: What structural, cultural, and leadership factors enable or constrain agility?',
-                'Sub-RQ3: How can startups maintain agility while scaling, and what obstacles emerge?',
-                'Sub-RQ4: What design principles help founders sustain agile organizational structures?'
+                'Sub-RQ1: What constitutes organizational agility in early-stage startups, and how does it differ from software-based agile methodologies?',
+                'Sub-RQ2: What structural, cultural, and leadership factors enable or constrain organizational agility in startup contexts?',
+                'Sub-RQ3: How can startups maintain agility while scaling, and what obstacles emerge during growth?',
+                'Sub-RQ4: What design principles and management practices can founders employ to design and sustain agile organizational structures?'
             ]
         },
         notes: 'Read the main question slowly and clearly. Sub-questions show the logical structure of the investigation.'

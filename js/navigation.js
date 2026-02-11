@@ -299,17 +299,22 @@ class PresentationNavigation {
                 <span class="slide-section-tag ${slide.sectionColor}">Research Question</span>
                 <h1 class="slide-title">${slide.title}</h1>
             </div>
-            <div class="slide-content" style="justify-content: center;">
+            <div class="slide-content" style="justify-content: center; gap: var(--space-lg);">
                 <div class="research-question-box">
                     <p class="research-question-text">${content.mainQuestion}</p>
                 </div>
-                
+
                 <div class="sub-questions stagger-children">
-                    ${content.subQuestions.map(q => `
+                    ${content.subQuestions.map((q, i) => {
+                        const parts = q.match(/^(Sub-RQ\d):\s*(.+)$/);
+                        const label = parts ? parts[1] : `Sub-RQ${i+1}`;
+                        const text = parts ? parts[2] : q;
+                        return `
                         <div class="sub-question">
-                            <span class="sub-question-text" style="font-weight: 500;">${q}</span>
-                        </div>
-                    `).join('')}
+                            <span class="sub-question-num">${label.replace('Sub-', '')}</span>
+                            <span class="sub-question-text">${text}</span>
+                        </div>`;
+                    }).join('')}
                 </div>
             </div>
         `;
