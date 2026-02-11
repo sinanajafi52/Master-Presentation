@@ -291,12 +291,10 @@ class PresentationNavigation {
                 </div>
             </div>
         `;
-    }
-
-    getQuestionSlideContent(slide, content) {
-        return `
+        getQuestionSlideContent(slide, content) {
+            return `
             <div class="slide-header">
-                <span class="slide-section-tag ${slide.sectionColor}">Research Question</span>
+                <span class="slide-section-tag ${slide.sectionColor}">Research Questions</span>
                 <h1 class="slide-title">${slide.title}</h1>
             </div>
             <div class="slide-content" style="justify-content: center; gap: var(--space-lg);">
@@ -306,22 +304,22 @@ class PresentationNavigation {
 
                 <div class="sub-questions">
                     ${content.subQuestions.map((q, i) => {
-            const parts = q.match(/^(Sub-RQ\d):\s*(.+)$/);
-            const label = parts ? parts[1] : `Sub-RQ${i + 1}`;
-            const text = parts ? parts[2] : q;
-            return `
+                const parts = q.match(/^(Sub-RQ\d):\s*(.+)$/);
+                const label = parts ? parts[1] : `Sub-RQ${i + 1}`;
+                const text = parts ? parts[2] : q;
+                return `
                         <div class="sub-question">
-                            <span class="sub-question-num">${label.replace('Sub-', '')}</span>
+                            <span class="sub-question-num" style="width: auto; padding: 0 8px; font-size: 0.65rem;">${label}</span>
                             <span class="sub-question-text">${text}</span>
                         </div>`;
-        }).join('')}
+            }).join('')}
                 </div>
             </div>
         `;
-    }
+        }
 
-    getTheorySlideContent(slide, content) {
-        return `
+        getTheorySlideContent(slide, content) {
+            return `
             <div class="slide-header">
                 <span class="slide-section-tag ${slide.sectionColor}">Theory</span>
                 <h1 class="slide-title">${slide.title}</h1>
@@ -359,18 +357,18 @@ class PresentationNavigation {
                 </div>
             </div>
         `;
-    }
+        }
 
-    getMethodologySlideContent(slide, content) {
-        const processFlow = content.analysis.processFlow || [
-            { step: 'Sampling', desc: 'Max Variation (7 Cases)' },
-            { step: 'Data Collection', desc: 'Semi-structured Interviews (445 min)' },
-            { step: 'Coding', desc: 'Reflexive Thematic Analysis (Manual)' },
-            { step: 'Synthesis', desc: 'Within-Case & Cross-Case Matrix' },
-            { step: 'Findings', desc: '5 Factors, 6 Principles, 5-Layer Framework' }
-        ];
+        getMethodologySlideContent(slide, content) {
+            const processFlow = content.analysis.processFlow || [
+                { step: 'Sampling', desc: 'Max Variation (7 Cases)' },
+                { step: 'Data Collection', desc: 'Semi-structured Interviews (445 min)' },
+                { step: 'Coding', desc: 'Reflexive Thematic Analysis (Manual)' },
+                { step: 'Synthesis', desc: 'Within-Case & Cross-Case Matrix' },
+                { step: 'Findings', desc: '5 Factors, 6 Principles, 5-Layer Framework' }
+            ];
 
-        return `
+            return `
             <div class="slide-header">
                 <span class="slide-section-tag ${slide.sectionColor}">Methodology</span>
                 <h1 class="slide-title">${slide.title}</h1>
@@ -440,10 +438,10 @@ class PresentationNavigation {
                 </div>
             </div>
         `;
-    }
+        }
 
-    getFactorsSlideContent(slide, content) {
-        return `
+        getFactorsSlideContent(slide, content) {
+            return `
             <div class="slide-header">
                 <span class="slide-section-tag ${slide.sectionColor}">Key Finding #1</span>
                 <h1 class="slide-title">${slide.title}</h1>
@@ -462,10 +460,10 @@ class PresentationNavigation {
                 </div>
             </div>
         `;
-    }
+        }
 
-    getComparisonSlideContent(slide, content) {
-        return `
+        getComparisonSlideContent(slide, content) {
+            return `
             <div class="slide-header">
                 <span class="slide-section-tag ${slide.sectionColor}">Key Finding #2</span>
                 <h1 class="slide-title">${slide.title}</h1>
@@ -511,10 +509,10 @@ class PresentationNavigation {
                 </div>
             </div>
         `;
-    }
+        }
 
-    getThresholdSlideContent(slide, content) {
-        return `
+        getThresholdSlideContent(slide, content) {
+            return `
             <div class="slide-header">
                 <span class="slide-section-tag ${slide.sectionColor}">Key Finding #3</span>
                 <h1 class="slide-title">${slide.title}</h1>
@@ -594,10 +592,10 @@ class PresentationNavigation {
                 </div>
             </div>
         `;
-    }
+        }
 
-    getFrameworkSlideContent(slide, content) {
-        return `
+        getFrameworkSlideContent(slide, content) {
+            return `
             <div class="slide-header">
                 <span class="slide-section-tag ${slide.sectionColor}">Framework</span>
                 <h1 class="slide-title">${slide.title}</h1>
@@ -623,10 +621,10 @@ class PresentationNavigation {
                 </div>
             </div>
         `;
-    }
+        }
 
-    getPrinciplesSlideContent(slide, content) {
-        return `
+        getPrinciplesSlideContent(slide, content) {
+            return `
             <div class="slide-header">
                 <span class="slide-section-tag ${slide.sectionColor}">Principles</span>
                 <h1 class="slide-title">${slide.title}</h1>
@@ -645,10 +643,10 @@ class PresentationNavigation {
                 </div>
             </div>
         `;
-    }
+        }
 
-    getLimitationsSlideContent(slide, content) {
-        return `
+        getLimitationsSlideContent(slide, content) {
+            return `
             <div class="slide-header">
                 <span class="slide-section-tag ${slide.sectionColor}">Limitations</span>
                 <h1 class="slide-title">${slide.title}</h1>
@@ -683,10 +681,10 @@ class PresentationNavigation {
                 </div>
             </div>
         `;
-    }
+        }
 
-    getConclusionSlideContent(slide, content) {
-        return `
+        getConclusionSlideContent(slide, content) {
+            return `
             <div class="slide-header">
                 <span class="slide-section-tag ${slide.sectionColor}">Conclusion</span>
                 <h1 class="slide-title">${slide.title}</h1>
@@ -725,10 +723,10 @@ class PresentationNavigation {
                 <div class="thank-you">${content.closing}</div>
             </div>
         `;
-    }
+        }
 
-    getCaseProfilesSlideContent(slide, content) {
-        return `
+        getCaseProfilesSlideContent(slide, content) {
+            return `
             <div class="slide-header">
                 <h1 class="slide-title">${slide.title}</h1>
             </div>
@@ -761,10 +759,10 @@ class PresentationNavigation {
                 </table>
             </div>
         `;
-    }
+        }
 
-    getContextSlideContent(slide, content) {
-        return `
+        getContextSlideContent(slide, content) {
+            return `
             <div class="slide-header">
                 <h1 class="slide-title">${slide.title}</h1>
             </div>
@@ -787,10 +785,10 @@ class PresentationNavigation {
                 </div>
             </div>
         `;
-    }
+        }
 
-    getMatrixSlideContent(slide, content) {
-        return `
+        getMatrixSlideContent(slide, content) {
+            return `
             <div class="slide-header">
                 <h1 class="slide-title">${slide.title}</h1>
             </div>
@@ -813,235 +811,235 @@ class PresentationNavigation {
                 </table>
             </div>
         `;
-    }
-
-    // Mode switching
-    setMode(mode) {
-        if (this.currentMode === mode) return;
-
-        this.currentMode = mode;
-
-        // Update mode buttons
-        document.querySelectorAll('.mode-btn').forEach(btn => {
-            btn.classList.remove('active');
-        });
-
-        if (mode === 'sphere') {
-            this.btnSphereMode?.classList.add('active');
-            this.sphereContainer?.classList.remove('hidden');
-            this.slidesContainer?.classList.add('hidden');
-        } else if (mode === 'linear') {
-            this.btnLinearMode?.classList.add('active');
-            this.sphereContainer?.classList.add('hidden');
-            this.slidesContainer?.classList.remove('hidden');
         }
 
-        // Dispatch event
-        document.dispatchEvent(new CustomEvent('modeChange', { detail: { mode } }));
-    }
+        // Mode switching
+        setMode(mode) {
+            if (this.currentMode === mode) return;
 
-    // Navigation
-    nextSlide() {
-        if (this.currentMode === 'sphere') {
-            this.setMode('linear');
-            return;
-        }
+            this.currentMode = mode;
 
-        if (this.currentSlide < this.totalSlides) {
-            this.goToSlide(this.currentSlide + 1);
-        }
-    }
-
-    prevSlide() {
-        if (this.currentSlide > 1) {
-            this.goToSlide(this.currentSlide - 1);
-        } else if (this.currentMode === 'linear') {
-            this.setMode('sphere');
-        }
-    }
-
-    goToSlide(slideId) {
-        const id = typeof slideId === 'string' ? parseInt(slideId) : slideId;
-        if (id < 1 || id > this.totalSlides) return;
-
-        // Set mode to linear if in sphere
-        if (this.currentMode === 'sphere') {
-            this.setMode('linear');
-        }
-
-        const previousSlide = this.currentSlide;
-        this.currentSlide = id;
-
-        // Update slide visibility
-        document.querySelectorAll('.slide').forEach(slide => {
-            const slideNum = parseInt(slide.dataset.slideId);
-            slide.classList.remove('active', 'prev');
-
-            if (slideNum === id) {
-                slide.classList.add('active');
-            } else if (slideNum < id) {
-                slide.classList.add('prev');
-            }
-        });
-
-        this.updateUI();
-
-        // Dispatch event
-        document.dispatchEvent(new CustomEvent('slideChange', {
-            detail: {
-                current: id,
-                previous: previousSlide,
-                direction: id > previousSlide ? 'next' : 'prev'
-            }
-        }));
-    }
-
-    goToBackupSlide(slideId) {
-        // Set mode to linear if in sphere
-        if (this.currentMode === 'sphere') {
-            this.setMode('linear');
-        }
-
-        // Update slide visibility for backup slides
-        document.querySelectorAll('.slide').forEach(slide => {
-            slide.classList.remove('active');
-        });
-
-        const backupSlide = document.getElementById(`slide-${slideId}`);
-        if (backupSlide) {
-            backupSlide.classList.add('active');
-        }
-
-        // Update indicator to show backup
-        if (this.currentSlideNum) {
-            this.currentSlideNum.textContent = slideId;
-        }
-    }
-
-    onSphereSectionClick(detail) {
-        const section = SECTIONS.find(s => s.name === detail.section);
-        if (section && section.slides.length > 0) {
-            this.goToSlide(section.slides[0]);
-        }
-    }
-
-    // Quick Jump
-    toggleQuickJump() {
-        if (this.isQuickJumpOpen) {
-            this.closeQuickJump();
-        } else {
-            this.openQuickJump();
-        }
-    }
-
-    openQuickJump() {
-        this.quickJumpOverlay?.classList.remove('hidden');
-        this.isQuickJumpOpen = true;
-        this.btnMenuMode?.classList.add('active');
-
-        // Highlight current slide
-        document.querySelectorAll('.quick-jump-item').forEach(item => {
-            item.classList.remove('active');
-            if (item.dataset.slide == this.currentSlide) {
-                item.classList.add('active');
-            }
-        });
-    }
-
-    closeQuickJump() {
-        this.quickJumpOverlay?.classList.add('hidden');
-        this.isQuickJumpOpen = false;
-        this.btnMenuMode?.classList.remove('active');
-    }
-
-    // Help modal
-    toggleHelp() {
-        if (this.isHelpOpen) {
-            this.closeHelp();
-        } else {
-            this.openHelp();
-        }
-    }
-
-    openHelp() {
-        this.helpModal?.classList.remove('hidden');
-        this.isHelpOpen = true;
-    }
-
-    closeHelp() {
-        this.helpModal?.classList.add('hidden');
-        this.isHelpOpen = false;
-    }
-
-    // Mini nav
-    toggleMiniNav() {
-        this.isMiniNavCollapsed = !this.isMiniNavCollapsed;
-        this.miniNav?.classList.toggle('collapsed', this.isMiniNavCollapsed);
-    }
-
-    // Fullscreen
-    toggleFullscreen() {
-        if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen().catch(err => {
-                console.log('Fullscreen error:', err);
+            // Update mode buttons
+            document.querySelectorAll('.mode-btn').forEach(btn => {
+                btn.classList.remove('active');
             });
-        } else {
-            document.exitFullscreen();
-        }
-    }
 
-    // UI Updates
-    updateUI() {
-        // Update slide number
-        if (this.currentSlideNum) {
-            this.currentSlideNum.textContent = this.currentSlide;
-        }
-        if (this.totalSlidesNum) {
-            this.totalSlidesNum.textContent = this.totalSlides;
-        }
-
-        // Update progress bar
-        const progress = ((this.currentSlide - 1) / (this.totalSlides - 1)) * 100;
-        if (this.progressFill) {
-            this.progressFill.style.width = `${progress}%`;
-        }
-
-        // Update mini nav
-        document.querySelectorAll('.mini-nav-item').forEach(item => {
-            const slideId = parseInt(item.dataset.slide);
-            item.classList.remove('active', 'completed');
-
-            if (slideId === this.currentSlide) {
-                item.classList.add('active');
-            } else if (slideId < this.currentSlide) {
-                item.classList.add('completed');
+            if (mode === 'sphere') {
+                this.btnSphereMode?.classList.add('active');
+                this.sphereContainer?.classList.remove('hidden');
+                this.slidesContainer?.classList.add('hidden');
+            } else if (mode === 'linear') {
+                this.btnLinearMode?.classList.add('active');
+                this.sphereContainer?.classList.add('hidden');
+                this.slidesContainer?.classList.remove('hidden');
             }
-        });
 
-        // Update navigation buttons
-        if (this.btnPrev) {
-            this.btnPrev.disabled = this.currentSlide === 1 && this.currentMode === 'linear';
+            // Dispatch event
+            document.dispatchEvent(new CustomEvent('modeChange', { detail: { mode } }));
         }
-        if (this.btnNext) {
-            this.btnNext.disabled = this.currentSlide === this.totalSlides;
+
+        // Navigation
+        nextSlide() {
+            if (this.currentMode === 'sphere') {
+                this.setMode('linear');
+                return;
+            }
+
+            if (this.currentSlide < this.totalSlides) {
+                this.goToSlide(this.currentSlide + 1);
+            }
+        }
+
+        prevSlide() {
+            if (this.currentSlide > 1) {
+                this.goToSlide(this.currentSlide - 1);
+            } else if (this.currentMode === 'linear') {
+                this.setMode('sphere');
+            }
+        }
+
+        goToSlide(slideId) {
+            const id = typeof slideId === 'string' ? parseInt(slideId) : slideId;
+            if (id < 1 || id > this.totalSlides) return;
+
+            // Set mode to linear if in sphere
+            if (this.currentMode === 'sphere') {
+                this.setMode('linear');
+            }
+
+            const previousSlide = this.currentSlide;
+            this.currentSlide = id;
+
+            // Update slide visibility
+            document.querySelectorAll('.slide').forEach(slide => {
+                const slideNum = parseInt(slide.dataset.slideId);
+                slide.classList.remove('active', 'prev');
+
+                if (slideNum === id) {
+                    slide.classList.add('active');
+                } else if (slideNum < id) {
+                    slide.classList.add('prev');
+                }
+            });
+
+            this.updateUI();
+
+            // Dispatch event
+            document.dispatchEvent(new CustomEvent('slideChange', {
+                detail: {
+                    current: id,
+                    previous: previousSlide,
+                    direction: id > previousSlide ? 'next' : 'prev'
+                }
+            }));
+        }
+
+        goToBackupSlide(slideId) {
+            // Set mode to linear if in sphere
+            if (this.currentMode === 'sphere') {
+                this.setMode('linear');
+            }
+
+            // Update slide visibility for backup slides
+            document.querySelectorAll('.slide').forEach(slide => {
+                slide.classList.remove('active');
+            });
+
+            const backupSlide = document.getElementById(`slide-${slideId}`);
+            if (backupSlide) {
+                backupSlide.classList.add('active');
+            }
+
+            // Update indicator to show backup
+            if (this.currentSlideNum) {
+                this.currentSlideNum.textContent = slideId;
+            }
+        }
+
+        onSphereSectionClick(detail) {
+            const section = SECTIONS.find(s => s.name === detail.section);
+            if (section && section.slides.length > 0) {
+                this.goToSlide(section.slides[0]);
+            }
+        }
+
+        // Quick Jump
+        toggleQuickJump() {
+            if (this.isQuickJumpOpen) {
+                this.closeQuickJump();
+            } else {
+                this.openQuickJump();
+            }
+        }
+
+        openQuickJump() {
+            this.quickJumpOverlay?.classList.remove('hidden');
+            this.isQuickJumpOpen = true;
+            this.btnMenuMode?.classList.add('active');
+
+            // Highlight current slide
+            document.querySelectorAll('.quick-jump-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.dataset.slide == this.currentSlide) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        closeQuickJump() {
+            this.quickJumpOverlay?.classList.add('hidden');
+            this.isQuickJumpOpen = false;
+            this.btnMenuMode?.classList.remove('active');
+        }
+
+        // Help modal
+        toggleHelp() {
+            if (this.isHelpOpen) {
+                this.closeHelp();
+            } else {
+                this.openHelp();
+            }
+        }
+
+        openHelp() {
+            this.helpModal?.classList.remove('hidden');
+            this.isHelpOpen = true;
+        }
+
+        closeHelp() {
+            this.helpModal?.classList.add('hidden');
+            this.isHelpOpen = false;
+        }
+
+        // Mini nav
+        toggleMiniNav() {
+            this.isMiniNavCollapsed = !this.isMiniNavCollapsed;
+            this.miniNav?.classList.toggle('collapsed', this.isMiniNavCollapsed);
+        }
+
+        // Fullscreen
+        toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.log('Fullscreen error:', err);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        // UI Updates
+        updateUI() {
+            // Update slide number
+            if (this.currentSlideNum) {
+                this.currentSlideNum.textContent = this.currentSlide;
+            }
+            if (this.totalSlidesNum) {
+                this.totalSlidesNum.textContent = this.totalSlides;
+            }
+
+            // Update progress bar
+            const progress = ((this.currentSlide - 1) / (this.totalSlides - 1)) * 100;
+            if (this.progressFill) {
+                this.progressFill.style.width = `${progress}%`;
+            }
+
+            // Update mini nav
+            document.querySelectorAll('.mini-nav-item').forEach(item => {
+                const slideId = parseInt(item.dataset.slide);
+                item.classList.remove('active', 'completed');
+
+                if (slideId === this.currentSlide) {
+                    item.classList.add('active');
+                } else if (slideId < this.currentSlide) {
+                    item.classList.add('completed');
+                }
+            });
+
+            // Update navigation buttons
+            if (this.btnPrev) {
+                this.btnPrev.disabled = this.currentSlide === 1 && this.currentMode === 'linear';
+            }
+            if (this.btnNext) {
+                this.btnNext.disabled = this.currentSlide === this.totalSlides;
+            }
+        }
+
+        // Public API
+        getCurrentSlide() {
+            return this.currentSlide;
+        }
+
+        getTotalSlides() {
+            return this.totalSlides;
+        }
+
+        getMode() {
+            return this.currentMode;
         }
     }
 
-    // Public API
-    getCurrentSlide() {
-        return this.currentSlide;
-    }
-
-    getTotalSlides() {
-        return this.totalSlides;
-    }
-
-    getMode() {
-        return this.currentMode;
-    }
-}
-
-// Export
-if (typeof window !== 'undefined') {
+    // Export
+    if(typeof window !== 'undefined') {
     window.PresentationNavigation = PresentationNavigation;
 }

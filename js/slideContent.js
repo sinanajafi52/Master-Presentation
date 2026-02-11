@@ -66,7 +66,7 @@ const SLIDES = [
         id: 3,
         section: 'problem',
         sectionColor: 'problem',
-        title: 'Research Question',
+        title: 'Research Questions',
         shortTitle: 'Question',
         duration: 90,
         isBackup: false,
