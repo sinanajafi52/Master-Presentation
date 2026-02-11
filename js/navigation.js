@@ -304,17 +304,17 @@ class PresentationNavigation {
                     <p class="research-question-text">${content.mainQuestion}</p>
                 </div>
 
-                <div class="sub-questions stagger-children">
+                <div class="sub-questions">
                     ${content.subQuestions.map((q, i) => {
-                        const parts = q.match(/^(Sub-RQ\d):\s*(.+)$/);
-                        const label = parts ? parts[1] : `Sub-RQ${i+1}`;
-                        const text = parts ? parts[2] : q;
-                        return `
+            const parts = q.match(/^(Sub-RQ\d):\s*(.+)$/);
+            const label = parts ? parts[1] : `Sub-RQ${i + 1}`;
+            const text = parts ? parts[2] : q;
+            return `
                         <div class="sub-question">
                             <span class="sub-question-num">${label.replace('Sub-', '')}</span>
                             <span class="sub-question-text">${text}</span>
                         </div>`;
-                    }).join('')}
+        }).join('')}
                 </div>
             </div>
         `;
