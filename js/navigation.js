@@ -449,7 +449,32 @@ class PresentationNavigation {
     }
 
     getFactorsSlideContent(slide, content) {
-        const factorColors = ['#6366f1', '#3498db', '#2ecc71', '#f39c12', '#e74c3c'];
+        const factorStyles = [
+            { color: '#6366f1', gradient: 'linear-gradient(135deg, rgba(99,102,241,0.15), rgba(99,102,241,0.03))' },
+            { color: '#3498db', gradient: 'linear-gradient(135deg, rgba(52,152,219,0.15), rgba(52,152,219,0.03))' },
+            { color: '#2ecc71', gradient: 'linear-gradient(135deg, rgba(46,204,113,0.15), rgba(46,204,113,0.03))' },
+            { color: '#f39c12', gradient: 'linear-gradient(135deg, rgba(243,156,18,0.15), rgba(243,156,18,0.03))' },
+            { color: '#e74c3c', gradient: 'linear-gradient(135deg, rgba(231,76,60,0.15), rgba(231,76,60,0.03))' }
+        ];
+
+        const cards = content.factors.map((f, i) => {
+            const s = factorStyles[i];
+            return `
+                <div class="factor-card" style="background: ${s.gradient}; border: 1px solid ${s.color}30;">
+                    <div class="factor-icon-wrapper" style="background: ${s.color}20; box-shadow: 0 0 20px ${s.color}25;">
+                        <span class="factor-icon-large">${f.icon}</span>
+                    </div>
+                    <div class="factor-card-body">
+                        <div class="factor-card-top">
+                            <span class="factor-number" style="background: ${s.color};">${i + 1}</span>
+                            <span class="factor-card-title">${f.title}</span>
+                        </div>
+                        <p class="factor-card-desc">${f.description}</p>
+                        <span class="factor-evidence-badge"><span style="color: ${s.color};">●</span> ${f.evidence}</span>
+                    </div>
+                </div>
+            `;
+        }).join('');
 
         return `
             <div class="slide-header">
@@ -457,19 +482,9 @@ class PresentationNavigation {
                 <h1 class="slide-title">${slide.title}</h1>
                 <p class="slide-subtitle">${content.headline}</p>
             </div>
-            <div class="slide-content">
+            <div class="slide-content" style="gap: var(--space-lg);">
                 <div class="factors-grid">
-                    ${content.factors.map((f, i) => `
-                        <div class="factor-card" style="border-left: 3px solid ${factorColors[i]};">
-                            <div class="factor-card-top">
-                                <span class="factor-number" style="background: ${factorColors[i]};">${i + 1}</span>
-                                <span class="factor-icon-inline">${f.icon}</span>
-                            </div>
-                            <h3 class="factor-card-title">${f.title}</h3>
-                            <p class="factor-card-desc">${f.description}</p>
-                            <span class="factor-evidence-badge">✓ ${f.evidence}</span>
-                        </div>
-                    `).join('')}
+                    ${cards}
                 </div>
             </div>
         `;
