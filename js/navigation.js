@@ -321,40 +321,46 @@ class PresentationNavigation {
     }
 
     getTheorySlideContent(slide, content) {
+        const theoryColors = {
+            'theory': { border: '#3498db', bg: 'rgba(52, 152, 219, 0.12)', glow: 'rgba(52, 152, 219, 0.3)' },
+            'method': { border: '#2ecc71', bg: 'rgba(46, 204, 113, 0.12)', glow: 'rgba(46, 204, 113, 0.3)' },
+            'findings': { border: '#f39c12', bg: 'rgba(243, 156, 18, 0.12)', glow: 'rgba(243, 156, 18, 0.3)' }
+        };
+
+        const theoryCards = content.theories.map(t => {
+            const c = theoryColors[t.color] || theoryColors['theory'];
+            return `
+                <div class="theory-card" style="border-top: 3px solid ${c.border}; background: ${c.bg};">
+                    <div class="theory-card-header">
+                        <span class="theory-abbrev" style="background: ${c.border};">${t.abbrev}</span>
+                        <span class="theory-explains" style="color: ${c.border};">Explains ${t.explains}</span>
+                    </div>
+                    <h3 class="theory-card-name">${t.name}</h3>
+                    <p class="theory-card-author">${t.author}</p>
+                    <p class="theory-card-desc">${t.description}</p>
+                </div>
+            `;
+        }).join('');
+
         return `
             <div class="slide-header">
                 <span class="slide-section-tag ${slide.sectionColor}">Theory</span>
                 <h1 class="slide-title">${slide.title}</h1>
             </div>
-            <div class="slide-content">
-                <h2 class="content-section-title">Three Complementary Theoretical Lenses</h2>
+            <div class="slide-content" style="gap: var(--space-lg);">
+                <h2 class="content-section-title" style="text-align: center;">Three Complementary Theoretical Lenses</h2>
                 
-                <div class="venn-diagram">
-                    <div class="venn-circle dct">
-                        <div>
-                            <div class="venn-label">Dynamic Capabilities</div>
-                            <div class="venn-desc">Explains HOW</div>
-                            <div class="venn-desc" style="margin-top: 0.5rem;">Sensing → Seizing → Transforming</div>
-                        </div>
-                    </div>
-                    <div class="venn-circle clt">
-                        <div>
-                            <div class="venn-label">Complexity Leadership</div>
-                            <div class="venn-desc">Explains WHO</div>
-                            <div class="venn-desc" style="margin-top: 0.5rem;">Adaptive + Enabling + Admin</div>
-                        </div>
-                    </div>
-                    <div class="venn-circle contingency">
-                        <div>
-                            <div class="venn-label">Contingency Theory</div>
-                            <div class="venn-desc">Explains WHY variation</div>
-                            <div class="venn-desc" style="margin-top: 0.5rem;">Stage, Sector, Size, Funding</div>
-                        </div>
-                    </div>
-                    <div class="venn-center">${content.centerLabel}</div>
+                <div class="theory-cards-grid">
+                    ${theoryCards}
+                </div>
+
+                <div class="theory-integration-banner">
+                    <span class="theory-integration-icon">⟶</span>
+                    <span class="theory-integration-label">${content.centerLabel}</span>
+                    <span class="theory-integration-icon">⟵</span>
                 </div>
                 
-                <div style="text-align: center; margin-top: 1rem; color: var(--color-accent-light); font-weight: 500;">
+                <div style="text-align: center; color: var(--color-accent-light); font-weight: 500; font-size: 1rem;">
                     ${content.contribution}
                 </div>
             </div>
