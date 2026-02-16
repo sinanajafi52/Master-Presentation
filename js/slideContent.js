@@ -170,52 +170,52 @@ const SLIDES = [
         notes: 'Emphasize the diversity of cases - this strengthens the findings. Manual coding shows rigor.'
     },
 
-    // ===== SLIDE 6: Key Finding #1 - Success Factors =====
+    // ===== SLIDE 6: Finding #1 - Five Universal Success Factors =====
     {
         id: 6,
         section: 'findings',
         sectionColor: 'findings',
-        title: 'Finding #1: Success Factors Across Cases',
-        shortTitle: 'Success Fact...',
+        title: 'Finding #1: Five Universal Success Factors',
+        shortTitle: 'Success Factors',
         duration: 120,
         isBackup: false,
         content: {
             type: 'factors',
-            headline: 'Five Success Factors Present Across All Seven Cases Examined',
+            headline: 'Five factors present across all seven cases',
             factors: [
                 {
                     icon: '🤝',
                     title: 'Trust & Psychological Safety',
-                    description: 'Foundation enabling risk-taking and experimentation',
-                    evidence: 'Present in all seven cases'
+                    description: 'Foundation enabling risk-taking, open communication, and experimentation',
+                    evidence: 'Emphasized by all 7 startups'
                 },
                 {
                     icon: '📚',
                     title: 'Learning Orientation',
-                    description: 'Continuous improvement over rigid process adherence',
-                    evidence: 'Manifested through retrospectives, feedback loops'
+                    description: 'Retrospectives, iteration, and experimentation over rigid process adherence',
+                    evidence: 'Present in all 7 startups'
                 },
                 {
                     icon: '🌱',
-                    title: 'Servant Leadership',
-                    description: 'Enabling team autonomy and professional growth',
-                    evidence: 'Founders focused on removing blockers'
+                    title: 'Servant/Delegative Leadership',
+                    description: 'Enabling team autonomy, removing blockers, and fostering professional growth',
+                    evidence: 'Emphasized by all 7 startups'
                 },
                 {
                     icon: '🎯',
-                    title: 'Results Focus > Process Compliance',
-                    description: 'Outcomes prioritized over ceremony adherence',
-                    evidence: '"Ship working software" mentality'
+                    title: 'Results over Process Compliance',
+                    description: 'Outcomes and working product prioritized over strict ceremony adherence',
+                    evidence: 'Observed in all 7 startups'
                 },
                 {
                     icon: '⚙️',
-                    title: 'Selective Framework Customization',
-                    description: 'Frameworks adapted to context, not vice versa',
-                    evidence: 'Context-dependent implementation'
+                    title: 'Selective Framework Adoption',
+                    description: 'Customize frameworks to context — don\'t copy wholesale (extract principles)',
+                    evidence: 'Applied by all 7 startups'
                 }
             ]
         },
-        notes: 'These five factors were found in all seven cases examined. This is the foundation. Culture beats structure.'
+        notes: 'These five factors were universally present. Culture beats structure. Trust is the foundation — no method works without it.'
     },
 
     // ===== SLIDE 7: Key Finding #2 - Team Experience Matters Most =====

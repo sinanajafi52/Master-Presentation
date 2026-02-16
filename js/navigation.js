@@ -449,20 +449,25 @@ class PresentationNavigation {
     }
 
     getFactorsSlideContent(slide, content) {
+        const factorColors = ['#6366f1', '#3498db', '#2ecc71', '#f39c12', '#e74c3c'];
+
         return `
             <div class="slide-header">
-                <span class="slide-section-tag ${slide.sectionColor}">Key Finding #1</span>
+                <span class="slide-section-tag ${slide.sectionColor}">Finding #1</span>
                 <h1 class="slide-title">${slide.title}</h1>
                 <p class="slide-subtitle">${content.headline}</p>
             </div>
             <div class="slide-content">
-                <div class="pentagon-layout stagger-children">
-                    ${content.factors.map(f => `
-                        <div class="pentagon-item hover-lift">
-                            <div class="factor-icon">${f.icon}</div>
-                            <div class="factor-title">${f.title}</div>
-                            <div class="factor-desc">${f.description}</div>
-                            <div class="factor-badge">${f.evidence}</div>
+                <div class="factors-grid">
+                    ${content.factors.map((f, i) => `
+                        <div class="factor-card" style="border-left: 3px solid ${factorColors[i]};">
+                            <div class="factor-card-top">
+                                <span class="factor-number" style="background: ${factorColors[i]};">${i + 1}</span>
+                                <span class="factor-icon-inline">${f.icon}</span>
+                            </div>
+                            <h3 class="factor-card-title">${f.title}</h3>
+                            <p class="factor-card-desc">${f.description}</p>
+                            <span class="factor-evidence-badge">✓ ${f.evidence}</span>
                         </div>
                     `).join('')}
                 </div>
@@ -473,7 +478,7 @@ class PresentationNavigation {
     getComparisonSlideContent(slide, content) {
         return `
             <div class="slide-header">
-                <span class="slide-section-tag ${slide.sectionColor}">Key Finding #2</span>
+                <span class="slide-section-tag ${slide.sectionColor}">Finding #2</span>
                 <h1 class="slide-title">${slide.title}</h1>
                 <p class="slide-subtitle">${content.headline}</p>
             </div>
@@ -522,7 +527,7 @@ class PresentationNavigation {
     getThresholdSlideContent(slide, content) {
         return `
             <div class="slide-header">
-                <span class="slide-section-tag ${slide.sectionColor}">Key Finding #3</span>
+                <span class="slide-section-tag ${slide.sectionColor}">Finding #3</span>
                 <h1 class="slide-title">${slide.title}</h1>
                 <p class="slide-subtitle">${content.headline}</p>
             </div>
