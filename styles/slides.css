@@ -371,55 +371,6 @@
     /* Bottom Right-ish */
 }
 
-/* Note: translateX(-85%) moves it left. translateX(-15%) moves it explicitly right of center? 
-   Wait, circle center is at 50% left of element.
-   left: 50% makes left edge at center.
-   transform: translateX(-50%) centers it.
-   To move left: translateX(-100%).
-   To move right: translateX(0%).
-   
-   Let's use calcs for better precision without transform trickery for positioning if possible, 
-   but transform is safer for centering.
-   
-   Better Logic:
-   DCT: Top centered.
-   CLT: Bottom Left. left: 50%, margin-left: -200px (overlap).
-   Contingency: Bottom Right. left: 50%, margin-left: -100px? No.
-   
-   Let's stick to transform.
-   DCT: translateX(-50%) -> Centered.
-   CLT: translateX(-80%) -> Moves left.
-   Contingency: translateX(-20%) -> Moves right (relative to -50% center).
-   
-   Let's try simpler logic:
-   CLT: left: 20%; transform: none;
-   Contingency: right: 20%; transform: none;
-   
-   BUT container width varies.
-   
-   Back to center-based:
-   CLT: left: calc(50% - 180px);
-   Contingency: left: calc(50% - 120px); -> No.
-   
-   Let's use the replacement content below which is tested logic.
-*/
-
-.venn-circle.clt {
-    background: radial-gradient(circle at center, rgba(46, 204, 113, 0.3) 0%, rgba(46, 204, 113, 0.05) 100%);
-    border: 2px solid rgba(46, 204, 113, 0.5);
-    top: 180px;
-    left: 50%;
-    transform: translateX(-85%);
-}
-
-.venn-circle.contingency {
-    background: radial-gradient(circle at center, rgba(243, 156, 18, 0.3) 0%, rgba(243, 156, 18, 0.05) 100%);
-    border: 2px solid rgba(243, 156, 18, 0.5);
-    top: 180px;
-    left: 50%;
-    transform: translateX(-15%);
-}
-
 .venn-center {
     position: absolute;
     left: 50%;
@@ -1047,7 +998,7 @@
 }
 
 .process-step:not(:last-child)::after {
-    content: ?;
+    content: "→";
     position: absolute;
     right: -15px;
     top: 50%;

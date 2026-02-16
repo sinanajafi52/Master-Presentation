@@ -157,7 +157,7 @@ const SLIDES = [
             analysis: {
                 method: 'Reflexive thematic analysis (Braun & Clarke, 2006)',
                 process: 'Within-case profiling → Cross-case synthesis',
-                coding: 'Manual coding for transparency and depth', processFlow: [{ step: 'Sampling', desc: 'Max Variation (7 Cases)' }, { step: 'Collection', desc: 'Interviews (445 min)' }, { step: 'Coding', desc: 'Reflexive Thematic' }, { step: 'Synthesis', desc: 'Cross-Case Matrix' }, { step: 'Findings', desc: 'Factors & Framework' }],
+                coding: 'Manual coding for transparency and depth',
                 processFlow: [
                     { step: 'Sampling', desc: 'Maximum Variation (7 Cases)' },
                     { step: 'Data Collection', desc: 'Semi-structured Interviews (445 min)' },
