@@ -688,30 +688,34 @@ class PresentationNavigation {
             <div class="slide-header">
                 <span class="slide-section-tag ${slide.sectionColor}">Limitations</span>
                 <h1 class="slide-title">${slide.title}</h1>
+                <p class="slide-subtitle">${content.headline}</p>
             </div>
-            <div class="slide-content">
-                <div class="two-columns">
-                    <div class="column-card">
-                        <h3>📋 Study Limitations</h3>
-                        <div class="bullet-list" style="margin-top: 1rem;">
+            <div class="slide-content" style="justify-content: space-between;">
+                <div class="two-columns" style="flex: 1;">
+                    <div class="column-card" style="border-top: 3px solid rgba(245,158,11,0.6); display: flex; flex-direction: column;">
+                        <h3 style="color: var(--color-warning); margin-bottom: 0.75rem;">⚠️ Study Limitations</h3>
+                        <div class="limitations-list">
                             ${content.limitations.map(l => `
-                                <div class="bullet-item" style="border-left-color: var(--color-warning);">
-                                    <span class="bullet-icon">${l.icon}</span>
-                                    <span class="bullet-text">
-                                        <strong>${l.title}:</strong> ${l.description}
-                                    </span>
+                                <div class="limitation-item">
+                                    <div class="limitation-icon">${l.icon}</div>
+                                    <div class="limitation-content">
+                                        <div class="limitation-title">${l.title}</div>
+                                        <div class="limitation-desc">${l.description}</div>
+                                        <div class="limitation-mitigation">↳ ${l.mitigation}</div>
+                                    </div>
                                 </div>
                             `).join('')}
                         </div>
                     </div>
-                    
-                    <div class="column-card practice">
-                        <h3 style="color: var(--color-success);">🔬 Future Research Opportunities</h3>
-                        <div class="bullet-list" style="margin-top: 1rem;">
-                            ${content.futureResearch.map(r => `
-                                <div class="bullet-item" style="border-left-color: var(--color-success);">
-                                    <span class="bullet-icon">→</span>
-                                    <span class="bullet-text">${r}</span>
+
+                    <div class="column-card" style="border-top: 3px solid rgba(16,185,129,0.6); display: flex; flex-direction: column;">
+                        <h3 style="color: var(--color-success); margin-bottom: 0.75rem;">🔬 Future Research</h3>
+                        <div class="future-research-list">
+                            ${content.futureResearch.map((r, i) => `
+                                <div class="future-item">
+                                    <div class="future-number">${i + 1}</div>
+                                    <div class="future-icon">${r.icon}</div>
+                                    <div class="future-text">${r.text}</div>
                                 </div>
                             `).join('')}
                         </div>
@@ -726,39 +730,51 @@ class PresentationNavigation {
             <div class="slide-header">
                 <span class="slide-section-tag ${slide.sectionColor}">Conclusion</span>
                 <h1 class="slide-title">${slide.title}</h1>
+                <p class="slide-subtitle">${content.headline}</p>
             </div>
-            <div class="slide-content">
+            <div class="slide-content" style="justify-content: space-between;">
+                <div class="key-numbers-row">
+                    ${content.keyNumbers.map(n => `
+                        <div class="key-number-item">
+                            <div class="key-number-value">${n.value}</div>
+                            <div class="key-number-label">${n.label}</div>
+                        </div>
+                    `).join('')}
+                </div>
+
                 <div class="two-columns">
-                    <div class="column-card theory">
-                        <h3>📚 Theoretical Contributions</h3>
-                        <div class="bullet-list" style="margin-top: 1rem;">
+                    <div class="column-card" style="border-top: 3px solid rgba(52,152,219,0.6);">
+                        <h3 style="color: var(--color-theory);">📚 Theoretical Contributions</h3>
+                        <div class="contribution-list">
                             ${content.theoretical.map(t => `
-                                <div class="bullet-item">
-                                    <span class="bullet-icon">•</span>
-                                    <span class="bullet-text">${t}</span>
+                                <div class="contribution-item theory">
+                                    <span class="contribution-icon">${t.icon}</span>
+                                    <span class="contribution-text">${t.text}</span>
                                 </div>
                             `).join('')}
                         </div>
                     </div>
-                    
-                    <div class="column-card practice">
-                        <h3>🛠️ Practical Contributions</h3>
-                        <div class="bullet-list" style="margin-top: 1rem;">
+
+                    <div class="column-card" style="border-top: 3px solid rgba(46,204,113,0.6);">
+                        <h3 style="color: var(--color-method);">🛠️ Practical Contributions</h3>
+                        <div class="contribution-list">
                             ${content.practical.map(p => `
-                                <div class="bullet-item">
-                                    <span class="bullet-icon">•</span>
-                                    <span class="bullet-text">${p}</span>
+                                <div class="contribution-item practical">
+                                    <span class="contribution-icon">${p.icon}</span>
+                                    <span class="contribution-text">${p.text}</span>
                                 </div>
                             `).join('')}
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="conclusion-quote">
-                    <blockquote>${content.conclusion}</blockquote>
+                    <blockquote>"${content.conclusion}"</blockquote>
                 </div>
-                
-                <div class="thank-you">${content.closing}</div>
+
+                <div class="thank-you">
+                    <span class="thank-you-text">${content.closing}</span>
+                </div>
             </div>
         `;
     }
