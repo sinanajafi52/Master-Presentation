@@ -239,6 +239,7 @@ class PresentationNavigation {
         return `
             <div class="slide-content title-slide" style="padding-left: var(--space-3xl);">
                 <h1 class="main-title">${content.mainTitle}</h1>
+                ${content.mainTitleSub ? `<p class="main-title-sub">${content.mainTitleSub}</p>` : ''}
                 <p class="main-subtitle">${content.subtitle}</p>
                 <div class="author-info">
                     <span class="author-name">${content.author}</span>
@@ -247,7 +248,8 @@ class PresentationNavigation {
                 <div class="institution-info">
                     <span>${content.institution}</span>
                     <span>${content.faculty}</span>
-                    <span>Supervisor: ${content.supervisor}</span>
+                    <span>First Supervisor: ${content.supervisor}</span>
+                    ${content.secondSupervisor ? `<span>Second Supervisor: ${content.secondSupervisor}</span>` : ''}
                 </div>
                 <div class="defense-date">${content.date}</div>
             </div>
