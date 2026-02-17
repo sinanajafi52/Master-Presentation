@@ -535,14 +535,14 @@ class PresentationNavigation {
                 <h1 class="slide-title">${slide.title}</h1>
                 <p class="slide-subtitle">${content.headline}</p>
             </div>
-            <div class="slide-content">
+            <div class="slide-content" style="gap: var(--space-sm);">
                 <div class="threshold-chart">
-                    <div class="chart-formula">
+                    <div class="chart-formula" style="padding: var(--space-sm); font-size: 0.9rem;">
                         <span>Communication links = </span>
-                        <code style="background: rgba(255,255,255,0.1); padding: 0.25rem 0.5rem; border-radius: 0.25rem;">${content.formula}</code>
+                        <code style="background: rgba(255,255,255,0.1); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">${content.formula}</code>
                     </div>
-                    
-                    <div class="chart-container" style="margin: 2rem 0;">
+
+                    <div class="chart-container">
                         <svg class="chart-svg" viewBox="0 0 400 200">
                             <defs>
                                 <linearGradient id="curveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -574,38 +574,38 @@ class PresentationNavigation {
                             <text class="chart-label" x="210" y="12" style="fill: #ef4444; font-size: 10px;">CRITICAL</text>
                         </svg>
                     </div>
-                    
-                    <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 1rem;">
+
+                    <div style="display: flex; gap: 1.5rem; justify-content: center; align-items: center;">
                         ${content.examples.map(e => `
                             <div style="text-align: center;">
-                                <div style="font-size: 2rem; font-weight: 700; color: var(--color-accent-light);">${e.people}</div>
-                                <div style="color: var(--color-text-muted);">people</div>
-                                <div style="font-size: 1.5rem; font-weight: 600; margin-top: 0.5rem;">${e.links}</div>
-                                <div style="color: var(--color-text-muted);">links</div>
+                                <div style="font-size: 1.4rem; font-weight: 700; color: var(--color-accent-light);">${e.people}</div>
+                                <div style="color: var(--color-text-muted); font-size: 0.8rem;">people</div>
+                                <div style="font-size: 1.2rem; font-weight: 600;">${e.links}</div>
+                                <div style="color: var(--color-text-muted); font-size: 0.8rem;">links</div>
                             </div>
-                        `).join('<div style="font-size: 2rem; color: var(--color-text-muted);">→</div>')}
+                        `).join('<div style="font-size: 1.5rem; color: var(--color-text-muted);">→</div>')}
                         <div style="text-align: center; color: var(--color-warning);">
-                            <div style="font-size: 1.5rem; font-weight: 700;">${content.multiplierNote}</div>
+                            <div style="font-size: 1.1rem; font-weight: 700;">${content.multiplierNote}</div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="two-columns" style="margin-top: 1.5rem;">
-                    <div class="column-card theory">
-                        <h3 style="color: var(--color-success);">✓ Below Threshold</h3>
-                        <p style="color: var(--color-text-muted);">Cases: ${content.validation.below.cases.join(', ')} (${content.validation.below.size})</p>
-                        <p style="color: var(--color-text-secondary); margin-top: 0.5rem;">${content.validation.below.result}</p>
+
+                <div class="two-columns" style="margin-top: var(--space-sm);">
+                    <div class="column-card theory" style="padding: var(--space-sm) var(--space-md);">
+                        <h3 style="color: var(--color-success); font-size: 0.95rem;">✓ Below Threshold</h3>
+                        <p style="color: var(--color-text-muted); font-size: 0.85rem;">Cases: ${content.validation.below.cases.join(', ')} (${content.validation.below.size})</p>
+                        <p style="color: var(--color-text-secondary); font-size: 0.85rem;">${content.validation.below.result}</p>
                     </div>
-                    <div class="column-card">
-                        <h3 style="color: var(--color-danger);">✗ Above Threshold</h3>
-                        <p style="color: var(--color-text-muted);">Cases: ${content.validation.above.cases.join(', ')} (${content.validation.above.size})</p>
-                        <p style="color: var(--color-text-secondary); margin-top: 0.5rem;">${content.validation.above.result}</p>
+                    <div class="column-card" style="padding: var(--space-sm) var(--space-md);">
+                        <h3 style="color: var(--color-danger); font-size: 0.95rem;">✗ Above Threshold</h3>
+                        <p style="color: var(--color-text-muted); font-size: 0.85rem;">Cases: ${content.validation.above.cases.join(', ')} (${content.validation.above.size})</p>
+                        <p style="color: var(--color-text-secondary); font-size: 0.85rem;">${content.validation.above.result}</p>
                     </div>
                 </div>
-                
-                <div style="text-align: center; margin-top: 1.5rem; padding: 1rem; background: rgba(245, 158, 11, 0.1); border-radius: 0.75rem; border: 1px solid rgba(245, 158, 11, 0.3);">
+
+                <div style="text-align: center; padding: var(--space-sm) var(--space-md); background: rgba(245, 158, 11, 0.1); border-radius: 0.75rem; border: 1px solid rgba(245, 158, 11, 0.3);">
                     <strong style="color: var(--color-warning);">Actionable Insight:</strong>
-                    <span style="color: var(--color-text-secondary);"> ${content.actionableInsight}</span>
+                    <span style="color: var(--color-text-secondary); font-size: 0.9rem;"> ${content.actionableInsight}</span>
                 </div>
             </div>
         `;
