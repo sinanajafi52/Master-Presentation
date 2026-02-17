@@ -1221,6 +1221,278 @@
 }
 
 /* =====================================================
+   B1: CASE PROFILES GRID
+   ===================================================== */
+.case-profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.6rem;
+    width: 100%;
+}
+
+.case-profiles-grid > .case-profile-card:nth-child(n+5) {
+    /* Last row of 3 — center them */
+}
+
+.case-profile-card {
+    background: var(--color-bg-glass);
+    border-radius: var(--radius-md);
+    padding: 0.65rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    transition: all var(--transition-fast);
+}
+
+.case-profile-card:hover {
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateY(-2px);
+}
+
+.case-profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.case-profile-id {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--color-accent-light);
+    font-family: var(--font-mono);
+}
+
+.case-agility-badge {
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.case-agility-badge.agility-high {
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.case-agility-badge.agility-medium {
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.case-profile-sector {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+}
+
+.case-profile-icon {
+    font-size: 1rem;
+}
+
+.case-profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.case-detail {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: var(--color-text-secondary);
+}
+
+.case-detail-label {
+    font-weight: 600;
+    color: var(--color-text-muted);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.case-profile-challenge {
+    font-size: 0.72rem;
+    color: var(--color-text-secondary);
+    padding-top: 0.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.case-profile-note {
+    font-size: 0.68rem;
+    color: var(--color-accent-light);
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* =====================================================
+   B2: CONTEXT ASPECTS
+   ===================================================== */
+.context-aspects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    width: 100%;
+}
+
+.context-aspect-card {
+    display: flex;
+    gap: 0.8rem;
+    padding: 0.9rem;
+    background: var(--color-bg-glass);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-left: 3px solid rgba(231, 76, 60, 0.5);
+    transition: all var(--transition-fast);
+}
+
+.context-aspect-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateX(4px);
+}
+
+.context-aspect-icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.context-aspect-body {
+    flex: 1;
+}
+
+.context-aspect-title {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--color-text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.context-aspect-desc {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+    margin-bottom: 0.3rem;
+}
+
+.context-aspect-implication {
+    font-size: 0.78rem;
+    color: var(--color-accent-light);
+    font-style: italic;
+}
+
+.context-takeaway {
+    text-align: center;
+    padding: 0.8rem 1.2rem;
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.1) 0%, rgba(99, 102, 241, 0.08) 100%);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(231, 76, 60, 0.25);
+}
+
+.context-takeaway-label {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #e74c3c;
+    background: rgba(231, 76, 60, 0.15);
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    margin-bottom: 0.4rem;
+}
+
+.context-takeaway-text {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin: 0.4rem 0 0;
+    font-weight: 500;
+}
+
+/* =====================================================
+   B3: MATRIX TABLE ENHANCEMENTS
+   ===================================================== */
+.matrix-table {
+    font-size: 0.82rem !important;
+}
+
+.matrix-table th {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.5rem 0.6rem;
+}
+
+.matrix-table td {
+    padding: 0.45rem 0.6rem;
+    vertical-align: middle;
+}
+
+.matrix-case-id {
+    color: var(--color-accent-light);
+    font-family: var(--font-mono);
+}
+
+.matrix-cell {
+    display: inline-block;
+    padding: 0.12rem 0.45rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.78rem;
+}
+
+.matrix-cell.matrix-high {
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.12);
+}
+
+.matrix-cell.matrix-medium {
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.12);
+}
+
+.matrix-cell.matrix-low {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.12);
+}
+
+.matrix-patterns {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+.matrix-pattern-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.6rem 0.7rem;
+    background: rgba(243, 156, 18, 0.06);
+    border-radius: var(--radius-md);
+    border-left: 2px solid rgba(243, 156, 18, 0.4);
+}
+
+.matrix-pattern-label {
+    font-weight: 700;
+    font-size: 0.78rem;
+    color: var(--color-findings);
+}
+
+.matrix-pattern-desc {
+    font-size: 0.73rem;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+}
+
+/* =====================================================
    RESPONSIVE SLIDE ADJUSTMENTS
    ===================================================== */
 @media (max-width: 1366px) {

@@ -782,35 +782,34 @@ class PresentationNavigation {
     getCaseProfilesSlideContent(slide, content) {
         return `
             <div class="slide-header">
+                <span class="slide-section-tag ${slide.sectionColor}">Backup</span>
                 <h1 class="slide-title">${slide.title}</h1>
+                <p class="slide-subtitle">${content.headline}</p>
             </div>
             <div class="slide-content">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Case</th>
-                            <th>Sector</th>
-                            <th>Stage</th>
-                            <th>Size</th>
-                            <th>Funding</th>
-                            <th>Main Challenge</th>
-                            <th>Agility Level</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${content.cases.map(c => `
-                            <tr>
-                                <td><strong>${c.id}</strong></td>
-                                <td>${c.sector}</td>
-                                <td>${c.stage}</td>
-                                <td>${c.size}</td>
-                                <td>${c.funding}</td>
-                                <td>${c.challenge}</td>
-                                <td>${c.agility}</td>
-                            </tr>
-                        `).join('')}
-                    </tbody>
-                </table>
+                <div class="case-profiles-grid">
+                    ${content.cases.map(c => `
+                        <div class="case-profile-card">
+                            <div class="case-profile-header">
+                                <span class="case-profile-id">Case ${c.id}</span>
+                                <span class="case-agility-badge agility-${c.agility.toLowerCase()}">${c.agility}</span>
+                            </div>
+                            <div class="case-profile-sector">
+                                <span class="case-profile-icon">${c.icon}</span>
+                                <span>${c.sector}</span>
+                            </div>
+                            <div class="case-profile-details">
+                                <div class="case-detail"><span class="case-detail-label">Stage</span><span>${c.stage}</span></div>
+                                <div class="case-detail"><span class="case-detail-label">Size</span><span>${c.size} people</span></div>
+                                <div class="case-detail"><span class="case-detail-label">Funding</span><span>${c.funding}</span></div>
+                            </div>
+                            <div class="case-profile-challenge">
+                                <span class="case-detail-label">Challenge:</span> ${c.challenge}
+                            </div>
+                            <div class="case-profile-note">${c.agilityNote}</div>
+                        </div>
+                    `).join('')}
+                </div>
             </div>
         `;
     }
@@ -818,36 +817,49 @@ class PresentationNavigation {
     getContextSlideContent(slide, content) {
         return `
             <div class="slide-header">
+                <span class="slide-section-tag ${slide.sectionColor}">Backup</span>
                 <h1 class="slide-title">${slide.title}</h1>
+                <p class="slide-subtitle">${content.headline}</p>
             </div>
             <div class="slide-content">
-                <div class="bullet-list stagger-children">
+                <div class="context-aspects-grid">
                     ${content.aspects.map(a => `
-                        <div class="bullet-item">
-                            <div style="flex: 1;">
-                                <strong style="color: var(--color-text-primary);">${a.title}</strong>
-                                <p style="color: var(--color-text-secondary); margin: 0.5rem 0;">${a.description}</p>
-                                <p style="color: var(--color-accent-light); font-size: 0.9rem;">→ ${a.implication}</p>
+                        <div class="context-aspect-card">
+                            <div class="context-aspect-icon">${a.icon}</div>
+                            <div class="context-aspect-body">
+                                <div class="context-aspect-title">${a.title}</div>
+                                <div class="context-aspect-desc">${a.description}</div>
+                                <div class="context-aspect-implication">→ ${a.implication}</div>
                             </div>
                         </div>
                     `).join('')}
                 </div>
-                
-                <div style="text-align: center; margin-top: 2rem; padding: 1rem; background: rgba(99, 102, 241, 0.1); border-radius: 0.75rem;">
-                    <strong style="color: var(--color-accent-light);">Key Takeaway:</strong>
-                    <span style="color: var(--color-text-secondary);"> ${content.keyTakeaway}</span>
+
+                <div class="context-takeaway">
+                    <span class="context-takeaway-label">Key Takeaway</span>
+                    <p class="context-takeaway-text">${content.keyTakeaway}</p>
                 </div>
             </div>
         `;
     }
 
     getMatrixSlideContent(slide, content) {
+        const getValueClass = (v) => {
+            if (v === 'High') return 'matrix-high';
+            if (v === 'Medium') return 'matrix-medium';
+            if (v === 'Servant') return 'matrix-high';
+            if (v === 'Proactive' || v === 'Aware') return 'matrix-high';
+            if (v === 'Unaware') return 'matrix-low';
+            return '';
+        };
         return `
             <div class="slide-header">
+                <span class="slide-section-tag ${slide.sectionColor}">Backup</span>
                 <h1 class="slide-title">${slide.title}</h1>
+                <p class="slide-subtitle">${content.headline}</p>
             </div>
             <div class="slide-content">
-                <table class="data-table" style="font-size: 0.9rem;">
+                <table class="data-table matrix-table">
                     <thead>
                         <tr>
                             <th>Case</th>
@@ -857,12 +869,21 @@ class PresentationNavigation {
                     <tbody>
                         ${Object.entries(content.cases).map(([caseId, values]) => `
                             <tr>
-                                <td><strong>${caseId}</strong></td>
-                                ${values.map(v => `<td>${v}</td>`).join('')}
+                                <td><strong class="matrix-case-id">${caseId}</strong></td>
+                                ${values.map(v => `<td><span class="matrix-cell ${getValueClass(v)}">${v}</span></td>`).join('')}
                             </tr>
                         `).join('')}
                     </tbody>
                 </table>
+
+                <div class="matrix-patterns">
+                    ${content.patterns.map(p => `
+                        <div class="matrix-pattern-item">
+                            <span class="matrix-pattern-label">${p.label}</span>
+                            <span class="matrix-pattern-desc">${p.desc}</span>
+                        </div>
+                    `).join('')}
+                </div>
             </div>
         `;
     }
