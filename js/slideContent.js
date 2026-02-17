@@ -45,10 +45,6 @@ const SLIDES = [
                 label: 'of German startups have fewer than 10 employees',
                 source: 'Startup-Verband, 2024'
             },
-            problems: [
-                'Existing organizational agility research focuses on large enterprises (50+ employees)',
-                'Founders face critical decisions without evidence-based guidance:',
-            ],
             challenges: [
                 { icon: '⏱️', text: 'When to formalize processes?' },
                 { icon: '🔄', text: 'Which agile practices transfer to micro-enterprises?' },
