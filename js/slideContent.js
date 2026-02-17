@@ -502,14 +502,15 @@ const BACKUP_SLIDES = [
         isBackup: true,
         content: {
             type: 'case-profiles',
+            headline: 'Seven German Startups — Maximum Variation Sampling',
             cases: [
-                { id: 'A', sector: 'Railway Infrastructure', stage: 'Early Scaling', size: 7, funding: 'Investment', challenge: 'Regulatory compliance', agility: '5/10 (was higher)' },
-                { id: 'B', sector: 'Water Quality Monitoring', stage: 'Early Growth', size: 2, funding: 'EXIST', challenge: 'Resource constraints', agility: 'High' },
-                { id: 'C', sector: 'Organizational Consulting', stage: 'Ramp-up', size: 5, funding: 'Strategic', challenge: 'Matrix coordination', agility: 'High' },
-                { id: 'D', sector: 'Business Consulting', stage: 'Growth', size: 6, funding: 'Bootstrap', challenge: 'Project-based scaling', agility: 'High' },
-                { id: 'E', sector: 'Autonomous Firefighting', stage: 'Pre-seed', size: 4, funding: 'EXIST', challenge: 'Technical complexity', agility: 'Medium' },
-                { id: 'F', sector: 'Software Development', stage: 'Growth', size: 5, funding: 'Self-funded', challenge: 'Multi-sector clients', agility: 'Medium' },
-                { id: 'G', sector: 'Medical Education AI', stage: 'Pre-seed', size: 4, funding: 'EXIST', challenge: 'Medical regulations', agility: 'High' }
+                { id: 'A', sector: 'Railway Infrastructure', icon: '🚂', stage: 'Early Scaling', size: 7, funding: 'Investment', challenge: 'Regulatory compliance', agility: 'Medium', agilityNote: '5/10 — declined from higher' },
+                { id: 'B', sector: 'Water Quality Monitoring', icon: '💧', stage: 'Early Growth', size: 2, funding: 'EXIST', challenge: 'Resource constraints', agility: 'High', agilityNote: 'Strong cultural foundation' },
+                { id: 'C', sector: 'Organizational Consulting', icon: '🏢', stage: 'Ramp-up', size: 5, funding: 'Strategic', challenge: 'Matrix coordination', agility: 'High', agilityNote: 'Custom framework approach' },
+                { id: 'D', sector: 'Business Consulting', icon: '📊', stage: 'Growth', size: 6, funding: 'Bootstrap', challenge: 'Project-based scaling', agility: 'High', agilityNote: 'Near threshold — proactive' },
+                { id: 'E', sector: 'Autonomous Firefighting', icon: '🤖', stage: 'Pre-seed', size: 4, funding: 'EXIST', challenge: 'Technical complexity', agility: 'Medium', agilityNote: 'Limited formal structures' },
+                { id: 'F', sector: 'Software Development', icon: '💻', stage: 'Growth', size: 5, funding: 'Self-funded', challenge: 'Multi-sector clients', agility: 'Medium', agilityNote: 'Framework without culture' },
+                { id: 'G', sector: 'Medical Education AI', icon: '🧬', stage: 'Pre-seed', size: 4, funding: 'EXIST', challenge: 'Medical regulations', agility: 'High', agilityNote: 'Strong team experience' }
             ]
         }
     },
@@ -522,29 +523,34 @@ const BACKUP_SLIDES = [
         isBackup: true,
         content: {
             type: 'context',
+            headline: 'Why Silicon Valley Models Don\'t Translate Directly',
             aspects: [
                 {
+                    icon: '⚖️',
                     title: 'Geschäftsführer Liability',
                     description: 'Personal liability of managing directors creates risk-averse documentation culture',
                     implication: 'Limits purely agile approaches; requires some formalization'
                 },
                 {
+                    icon: '🏛️',
                     title: 'EXIST Funding Constraints',
-                    description: 'Government startup funding comes with reporting requirements',
+                    description: 'Government startup funding comes with reporting requirements & milestones',
                     implication: 'Structured milestone tracking needed alongside agile delivery'
                 },
                 {
+                    icon: '📜',
                     title: 'Sector-Specific Regulations',
-                    description: 'Railway (EBA), Medical devices (MDR), etc. have strict requirements',
+                    description: 'Railway (EBA), Medical devices (MDR), etc. impose strict compliance',
                     implication: 'Hybrid models necessary to combine agility with compliance'
                 },
                 {
+                    icon: '🤝',
                     title: 'Works Council Potential',
-                    description: 'At 5+ employees, workers can form works council (Betriebsrat)',
+                    description: 'At 5+ employees, workers can form a Betriebsrat (works council)',
                     implication: 'Influences decision-making processes and organizational structure'
                 }
             ],
-            keyTakeaway: 'German startups cannot fully adopt Silicon Valley agile models; hybrid approaches are a pragmatic necessity, not a failure.'
+            keyTakeaway: 'German startups cannot fully adopt Silicon Valley agile models — hybrid approaches are a pragmatic necessity, not a failure.'
         }
     },
     {
@@ -556,16 +562,22 @@ const BACKUP_SLIDES = [
         isBackup: true,
         content: {
             type: 'matrix',
-            dimensions: ['Trust Level', 'Learning Orientation', 'Leadership Style', 'Framework Usage', 'Threshold Awareness', 'Agility Outcome'],
+            headline: 'Pattern Analysis Across All Seven Cases',
+            dimensions: ['Trust', 'Learning', 'Leadership', 'Framework', 'Threshold Awareness', 'Agility'],
             cases: {
-                'A': ['High', 'High', 'Servant', 'Adapted OKR+Scrum', 'Proactive', '5/10 (was higher)'],
-                'B': ['High', 'High', 'Servant', 'Adapted Scrum', 'N/A (2 people)', 'High'],
+                'A': ['High', 'High', 'Servant', 'Adapted OKR+Scrum', 'Proactive', 'Medium'],
+                'B': ['High', 'High', 'Servant', 'Adapted Scrum', 'N/A (2p)', 'High'],
                 'C': ['High', 'High', 'Servant', 'Custom Matrix', 'Aware', 'High'],
                 'D': ['High', 'High', 'Servant', 'Project-based', 'Learning', 'High'],
-                'E': ['High', 'High', 'Collaborative', 'Minimal', 'N/A (4 people)', 'Medium'],
+                'E': ['High', 'High', 'Collaborative', 'Minimal', 'N/A (4p)', 'Medium'],
                 'F': ['Medium', 'Medium', 'Semi-agile', 'Full Scrum', 'Unaware', 'Medium'],
-                'G': ['High', 'High', 'Servant', 'Minimal', 'N/A (4 people)', 'High']
-            }
+                'G': ['High', 'High', 'Servant', 'Minimal', 'N/A (4p)', 'High']
+            },
+            patterns: [
+                { label: 'Culture First', desc: '6/7 cases show high trust + high learning as the foundation' },
+                { label: 'Servant Leadership', desc: '5/7 founders practice servant leadership style' },
+                { label: 'Framework ≠ Agility', desc: 'Case F uses full Scrum but only achieves medium agility' }
+            ]
         }
     }
 ];
