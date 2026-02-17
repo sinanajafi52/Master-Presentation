@@ -105,6 +105,9 @@
    ===================================================== */
 .stagger-children>* {
     opacity: 0;
+}
+
+.slide.active .stagger-children>* {
     animation: fadeInUp var(--transition-normal) ease both;
 }
 

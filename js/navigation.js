@@ -648,7 +648,14 @@ class PresentationNavigation {
     }
 
     getPrinciplesSlideContent(slide, content) {
-        const principleColors = ['#10b981', '#3b82f6', '#8b5cf6', '#f59e0b', '#ef4444', '#6366f1'];
+        const principleStyles = [
+            { color: '#10b981', bg: 'rgba(16,185,129,0.12)', border: 'rgba(16,185,129,0.25)' },
+            { color: '#3b82f6', bg: 'rgba(59,130,246,0.12)', border: 'rgba(59,130,246,0.25)' },
+            { color: '#8b5cf6', bg: 'rgba(139,92,246,0.12)', border: 'rgba(139,92,246,0.25)' },
+            { color: '#f59e0b', bg: 'rgba(245,158,11,0.12)', border: 'rgba(245,158,11,0.25)' },
+            { color: '#ef4444', bg: 'rgba(239,68,68,0.12)', border: 'rgba(239,68,68,0.25)' },
+            { color: '#6366f1', bg: 'rgba(99,102,241,0.12)', border: 'rgba(99,102,241,0.25)' }
+        ];
         const principleLinks = ['Finding #1', 'Finding #3', 'Finding #2', 'German Context', 'Finding #3', 'Finding #1'];
         return `
             <div class="slide-header">
@@ -658,17 +665,19 @@ class PresentationNavigation {
             </div>
             <div class="slide-content">
                 <div class="principles-grid stagger-children">
-                    ${content.principles.map((p, i) => `
-                        <div class="principle-card hover-lift" style="border-top: 3px solid ${principleColors[i]};">
+                    ${content.principles.map((p, i) => {
+                        const s = principleStyles[i];
+                        return `
+                        <div class="principle-card hover-lift" style="border-top: 3px solid ${s.color};">
                             <div class="principle-header">
-                                <div class="principle-icon" style="background: ${principleColors[i]}20; color: ${principleColors[i]};">${p.icon}</div>
-                                <span class="principle-badge" style="background: ${principleColors[i]}18; color: ${principleColors[i]}; border: 1px solid ${principleColors[i]}40;">${principleLinks[i]}</span>
+                                <div class="principle-icon" style="background: ${s.bg}; color: ${s.color};">${p.icon}</div>
+                                <span class="principle-badge" style="background: ${s.bg}; color: ${s.color}; border: 1px solid ${s.border};">${principleLinks[i]}</span>
                             </div>
-                            <div class="principle-number" style="color: ${principleColors[i]};">Principle ${p.number}</div>
+                            <div class="principle-number" style="color: ${s.color};">Principle ${p.number}</div>
                             <div class="principle-title">${p.title}</div>
                             <div class="principle-desc">${p.description}</div>
                         </div>
-                    `).join('')}
+                    `}).join('')}
                 </div>
             </div>
         `;
