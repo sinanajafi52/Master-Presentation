@@ -16,12 +16,14 @@ const SLIDES = [
         content: {
             type: 'title',
             mainTitle: 'Agile Business Structure and Organizational Management for Startups',
+            mainTitleSub: 'Designing Adaptive and Scalable Enterprises',
             subtitle: 'A Qualitative Multi-Case Study of Early-Stage German Startups (2-10 Employees)',
             author: 'Sina Najafi',
-            role: "Master's Thesis Defense",
+            role: "Master's Thesis Defense — Digital Technology M.Sc.",
             institution: 'Ostfalia University of Applied Sciences',
-            faculty: 'Faculty of Business Administration',
+            faculty: 'Faculty of Computer Science',
             supervisor: 'Prof. Dr. Denis Royer',
+            secondSupervisor: 'Prof. Dr. Wolfram Ludwig',
             date: 'January 2026'
         },
         notes: 'Introduce self, thank supervisor and committee, set context. Keep it brief and confident.'
@@ -77,7 +79,7 @@ const SLIDES = [
                 'Sub-RQ1: What constitutes organizational agility in early-stage startups, and how does it differ from software-based agile methodologies?',
                 'Sub-RQ2: What structural, cultural, and leadership factors enable or constrain organizational agility in startup contexts?',
                 'Sub-RQ3: How can startups maintain agility while scaling, and what obstacles emerge during growth?',
-                'Sub-RQ4: What design principles and management practices can founders employ to design and sustain agile organizational structures?'
+                'Sub-RQ4: What design principles and management practices can founders employ to build adaptive, scalable, and sustainable agile structures?'
             ]
         },
         notes: 'Read the main question slowly and clearly. Sub-questions show the logical structure of the investigation.'
@@ -99,7 +101,7 @@ const SLIDES = [
                     name: 'Dynamic Capabilities Theory',
                     abbrev: 'DCT',
                     author: 'Teece et al., 1997',
-                    explains: 'HOW',
+                    explains: 'WHAT',
                     description: 'Sensing → Seizing → Transforming mechanisms',
                     color: 'theory'
                 },
@@ -107,7 +109,7 @@ const SLIDES = [
                     name: 'Complexity Leadership Theory',
                     abbrev: 'CLT',
                     author: 'Uhl-Bien et al., 2007',
-                    explains: 'WHO',
+                    explains: 'HOW',
                     description: 'Adaptive + Enabling + Administrative leadership functions',
                     color: 'method'
                 },
@@ -316,7 +318,7 @@ const SLIDES = [
                     name: 'Cultural Foundations',
                     type: 'culture',
                     description: 'PREREQUISITES (NOT Optional)',
-                    items: 'Trust | Psychological Safety | Learning Orientation | Results Focus',
+                    items: 'Trust | Psychological Safety | Learning Orientation | Results Focus | Servant Leadership',
                     isPrerequisite: true
                 },
                 {
@@ -324,21 +326,21 @@ const SLIDES = [
                     name: 'Structural Mechanisms',
                     type: 'structure',
                     description: 'Context-Dependent',
-                    items: 'Flat Hierarchies | Role Design | Decision Distribution'
+                    items: 'Org. Architecture | Role Design | Decision Distribution | Coordination Mechanisms'
                 },
                 {
                     number: 4,
                     name: 'Leadership Approaches',
                     type: 'leadership',
                     description: 'Enabling Dynamics',
-                    items: 'Servant Leadership | Threshold-Aware | Adaptive-Enabling Balance'
+                    items: 'Empowerment Levels | Process-Results Orientation | Autonomy-Alignment Balance'
                 },
                 {
                     number: 5,
                     name: 'Agility Outcomes',
                     type: 'outcomes',
                     description: 'Desired Results',
-                    items: 'Adaptability | Speed | Flexibility | Resilience | Sustainable Growth'
+                    items: 'Decision Speed | Flexibility | Responsiveness | Sustainable Growth'
                 }
             ],
             criticalInsight: 'Layer 2 (Cultural Foundations) must be established BEFORE Layer 3 (Structure). Cultural foundations are universal; structure is contingent.'

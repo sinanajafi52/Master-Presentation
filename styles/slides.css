@@ -1155,11 +1155,19 @@
     font-size: var(--text-hero);
     font-weight: 800;
     line-height: 1.1;
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-xs);
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.title-slide .main-title-sub {
+    font-size: var(--text-h3);
+    font-weight: 400;
+    color: var(--color-accent-light);
+    margin-bottom: var(--space-md);
+    font-style: italic;
 }
 
 .title-slide .main-subtitle {
