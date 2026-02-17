@@ -592,15 +592,15 @@
 
 /* Threshold Chart */
 .threshold-chart {
-    padding: var(--space-sm) var(--space-md);
+    padding: var(--space-md) var(--space-lg);
     background: var(--color-bg-glass);
     border-radius: var(--radius-xl);
 }
 
 .chart-container {
     position: relative;
-    height: 150px;
-    margin: var(--space-xs) 0;
+    height: 190px;
+    margin: var(--space-sm) 0;
 }
 
 .chart-svg {
