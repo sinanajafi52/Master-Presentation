@@ -612,35 +612,44 @@ class PresentationNavigation {
     }
 
     getFrameworkSlideContent(slide, content) {
+        const layerIcons = ['🌐', '💚', '🔧', '👤', '🎯'];
         return `
             <div class="slide-header">
                 <span class="slide-section-tag ${slide.sectionColor}">Framework</span>
                 <h1 class="slide-title">${slide.title}</h1>
                 <p class="slide-subtitle">${content.headline}</p>
             </div>
-            <div class="slide-content">
+            <div class="slide-content" style="justify-content: space-between;">
                 <div class="framework-layers stagger-children">
                     ${content.layers.map((layer, index) => `
                         <div class="framework-layer ${layer.type}">
+                            <span class="layer-icon">${layerIcons[index]}</span>
                             <span class="layer-number">${layer.number}</span>
                             <div class="layer-content">
-                                <div class="layer-title">${layer.name} <span style="color: var(--color-text-muted); font-weight: 400; font-size: 0.875rem;">(${layer.description})</span></div>
-                                <div class="layer-items">${layer.items}</div>
+                                <div class="layer-title">${layer.name} <span class="layer-badge ${layer.type}">${layer.description}</span></div>
+                                <div class="layer-items">
+                                    ${layer.items.split(' | ').map(item => `<span class="layer-tag">${item}</span>`).join('')}
+                                </div>
                             </div>
                         </div>
-                        ${index < content.layers.length - 1 ? '<div class="framework-arrow">↓</div>' : ''}
+                        ${index < content.layers.length - 1 ? '<div class="framework-arrow"><svg width="20" height="12" viewBox="0 0 20 12"><path d="M10 12L0 0h20z" fill="currentColor" opacity="0.4"/></svg></div>' : ''}
                     `).join('')}
                 </div>
-                
-                <div style="text-align: center; margin-top: 2rem; padding: 1rem; background: rgba(16, 185, 129, 0.1); border-radius: 0.75rem; border: 1px solid rgba(16, 185, 129, 0.3);">
-                    <strong style="color: var(--color-success);">Critical Insight:</strong>
-                    <span style="color: var(--color-text-secondary);"> ${content.criticalInsight}</span>
+
+                <div class="framework-insight-box">
+                    <div class="framework-insight-icon">⚡</div>
+                    <div>
+                        <strong style="color: var(--color-success);">Critical Insight:</strong>
+                        <span style="color: var(--color-text-secondary);"> ${content.criticalInsight}</span>
+                    </div>
                 </div>
             </div>
         `;
     }
 
     getPrinciplesSlideContent(slide, content) {
+        const principleColors = ['#10b981', '#3b82f6', '#8b5cf6', '#f59e0b', '#ef4444', '#6366f1'];
+        const principleLinks = ['Finding #1', 'Finding #3', 'Finding #2', 'German Context', 'Finding #3', 'Finding #1'];
         return `
             <div class="slide-header">
                 <span class="slide-section-tag ${slide.sectionColor}">Principles</span>
@@ -649,10 +658,13 @@ class PresentationNavigation {
             </div>
             <div class="slide-content">
                 <div class="principles-grid stagger-children">
-                    ${content.principles.map(p => `
-                        <div class="principle-card hover-lift">
-                            <div class="principle-icon">${p.icon}</div>
-                            <div class="principle-number">Principle ${p.number}</div>
+                    ${content.principles.map((p, i) => `
+                        <div class="principle-card hover-lift" style="border-top: 3px solid ${principleColors[i]};">
+                            <div class="principle-header">
+                                <div class="principle-icon" style="background: ${principleColors[i]}20; color: ${principleColors[i]};">${p.icon}</div>
+                                <span class="principle-badge" style="background: ${principleColors[i]}18; color: ${principleColors[i]}; border: 1px solid ${principleColors[i]}40;">${principleLinks[i]}</span>
+                            </div>
+                            <div class="principle-number" style="color: ${principleColors[i]};">Principle ${p.number}</div>
                             <div class="principle-title">${p.title}</div>
                             <div class="principle-desc">${p.description}</div>
                         </div>
