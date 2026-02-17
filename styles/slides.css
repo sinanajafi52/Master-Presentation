@@ -890,29 +890,246 @@
     color: var(--color-method);
 }
 
+/* =====================================================
+   SLIDE 11: LIMITATIONS STYLES
+   ===================================================== */
+.limitations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.limitation-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.5rem 0.6rem;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.03);
+    transition: all var(--transition-fast);
+}
+
+.limitation-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateX(4px);
+}
+
+.limitation-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.limitation-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.limitation-title {
+    font-weight: 600;
+    color: var(--color-text-primary);
+    font-size: 0.88rem;
+}
+
+.limitation-desc {
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    margin-top: 0.1rem;
+}
+
+.limitation-mitigation {
+    color: var(--color-success);
+    font-size: 0.75rem;
+    margin-top: 0.2rem;
+    opacity: 0.85;
+}
+
+.future-research-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.future-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 0.6rem;
+    border-radius: var(--radius-md);
+    background: rgba(16, 185, 129, 0.04);
+    border-left: 2px solid rgba(16, 185, 129, 0.3);
+    transition: all var(--transition-fast);
+}
+
+.future-item:hover {
+    background: rgba(16, 185, 129, 0.08);
+    transform: translateX(4px);
+    border-left-color: rgba(16, 185, 129, 0.6);
+}
+
+.future-number {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-success);
+    background: rgba(16, 185, 129, 0.15);
+    border-radius: 50%;
+}
+
+.future-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.future-text {
+    flex: 1;
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+}
+
+/* =====================================================
+   SLIDE 12: CONCLUSION STYLES
+   ===================================================== */
+.key-numbers-row {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+}
+
+.key-number-item {
+    text-align: center;
+    padding: 0.6rem 1.5rem;
+    background: var(--color-bg-glass);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(26, 188, 156, 0.2);
+    transition: all var(--transition-fast);
+}
+
+.key-number-item:hover {
+    border-color: rgba(26, 188, 156, 0.5);
+    transform: translateY(-2px);
+}
+
+.key-number-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-family: var(--font-mono);
+    background: linear-gradient(135deg, #1abc9c, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.key-number-label {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 0.15rem;
+}
+
+.contribution-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-top: 0.6rem;
+}
+
+.contribution-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.45rem 0.55rem;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.contribution-item.theory {
+    background: rgba(52, 152, 219, 0.05);
+    border-left: 2px solid rgba(52, 152, 219, 0.3);
+}
+
+.contribution-item.practical {
+    background: rgba(46, 204, 113, 0.05);
+    border-left: 2px solid rgba(46, 204, 113, 0.3);
+}
+
+.contribution-item:hover {
+    transform: translateX(4px);
+}
+
+.contribution-item.theory:hover {
+    background: rgba(52, 152, 219, 0.1);
+}
+
+.contribution-item.practical:hover {
+    background: rgba(46, 204, 113, 0.1);
+}
+
+.contribution-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+}
+
+.contribution-text {
+    flex: 1;
+    font-size: 0.83rem;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+}
+
 /* Conclusion Quote */
 .conclusion-quote {
-    padding: var(--space-lg);
-    margin-top: var(--space-md);
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.1) 100%);
+    padding: var(--space-md) var(--space-lg);
+    background: linear-gradient(135deg, rgba(26, 188, 156, 0.12) 0%, rgba(99, 102, 241, 0.1) 100%);
     border-radius: var(--radius-lg);
-    border: 2px solid rgba(99, 102, 241, 0.4);
+    border: 1px solid rgba(26, 188, 156, 0.3);
     text-align: center;
+    position: relative;
+}
+
+.conclusion-quote::before {
+    content: '"';
+    position: absolute;
+    top: -0.2rem;
+    left: 1rem;
+    font-size: 3rem;
+    color: rgba(26, 188, 156, 0.25);
+    font-family: Georgia, serif;
+    line-height: 1;
 }
 
 .conclusion-quote blockquote {
-    font-size: var(--text-h2);
+    font-size: 0.95rem;
     font-weight: 500;
     font-style: italic;
-    line-height: 1.5;
+    line-height: 1.6;
     color: var(--color-text-primary);
+    margin: 0;
 }
 
 .thank-you {
     text-align: center;
-    margin-top: var(--space-md);
-    font-size: var(--text-body);
-    color: var(--color-accent-light);
+    padding: 0.5rem;
+}
+
+.thank-you-text {
+    font-size: 1rem;
+    font-weight: 500;
+    background: linear-gradient(135deg, #1abc9c, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* =====================================================

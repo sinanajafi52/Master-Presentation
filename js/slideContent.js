@@ -411,39 +411,45 @@ const SLIDES = [
         isBackup: false,
         content: {
             type: 'limitations',
+            headline: 'Transparency Strengthens Validity',
             limitations: [
                 {
                     icon: '📊',
                     title: 'Sample Size',
-                    description: '7 cases enable pattern identification, not statistical generalization'
+                    description: '7 cases — pattern identification, not statistical generalization',
+                    mitigation: 'Maximum variation sampling strengthens transferability'
                 },
                 {
                     icon: '🌍',
                     title: 'Geographic Scope',
-                    description: 'Germany only—institutional context matters for transferability'
+                    description: 'Germany only — institutional context limits direct transfer',
+                    mitigation: 'Framework layers are adaptable to other contexts'
                 },
                 {
                     icon: '📸',
-                    title: 'Cross-Sectional Design',
-                    description: 'Snapshot in time, not longitudinal tracking'
+                    title: 'Cross-Sectional',
+                    description: 'Single point-in-time snapshot, no longitudinal tracking',
+                    mitigation: 'Retrospective narratives capture developmental arcs'
                 },
                 {
                     icon: '👤',
-                    title: 'Founder Perspectives',
-                    description: 'Self-reported data, no team member interviews'
+                    title: 'Founder-Only View',
+                    description: 'Self-reported data without team member triangulation',
+                    mitigation: 'Reflexive analysis reduces single-source bias'
                 },
                 {
                     icon: '📏',
                     title: 'Size Range',
-                    description: 'Findings specific to 2-10 employees, may not apply beyond'
+                    description: 'Specific to 2-10 employees, may not scale beyond',
+                    mitigation: 'Deliberate scope — fills the exact research gap'
                 }
             ],
             futureResearch: [
-                'Longitudinal studies tracking startups through critical threshold',
-                'Quantitative validation of experience-framework contribution differential',
-                'Extension to other European institutional contexts',
-                'Team member perspective studies',
-                'Larger sample for statistical generalization'
+                { icon: '📈', text: 'Longitudinal studies tracking startups through the 6-8 threshold' },
+                { icon: '🔢', text: 'Quantitative validation of experience vs. framework contribution' },
+                { icon: '🇪🇺', text: 'Extension to other European institutional contexts' },
+                { icon: '👥', text: 'Multi-perspective studies including team members' },
+                { icon: '🔬', text: 'Larger samples enabling statistical generalization' }
             ]
         },
         notes: 'Be honest about limitations - this shows academic maturity. Frame future research positively.'
@@ -460,18 +466,25 @@ const SLIDES = [
         isBackup: false,
         content: {
             type: 'conclusion',
+            headline: 'What This Research Contributes',
             theoretical: [
-                'Contributes to organizational agility theory by examining micro-enterprises (2-10 employees)',
-                'Integrates Dynamic Capabilities + Complexity Leadership + Contingency theories',
-                'Identifies and validates critical 6-8 person threshold with mathematical proof',
-                'Suggests team experience contributes substantially more to agility outcomes than framework choice'
+                { icon: '🔍', text: 'First study examining organizational agility in micro-enterprises (2-10 employees)' },
+                { icon: '🔗', text: 'Novel integration of DCT + CLT + Contingency Theory for startups' },
+                { icon: '📐', text: 'Identifies and validates the critical 6-8 person threshold' },
+                { icon: '🧠', text: 'Demonstrates that team experience outweighs framework choice' }
             ],
             practical: [
-                'Five-layer framework for designing adaptive, scalable micro-enterprises',
-                'Six evidence-based guiding principles for German startup founders',
-                'Context-appropriate guidance accounting for German institutional environment'
+                { icon: '🏗️', text: 'Five-layer framework for designing adaptive micro-enterprises' },
+                { icon: '📋', text: 'Six evidence-based guiding principles for German founders' },
+                { icon: '🇩🇪', text: 'Context-appropriate guidance for German institutional environment' }
             ],
-            conclusion: '"Organizational agility in micro-enterprises is fundamentally cultural rather than structural—foundations must precede frameworks, and context always matters."',
+            keyNumbers: [
+                { value: '7', label: 'Cases Studied' },
+                { value: '5', label: 'Layer Framework' },
+                { value: '6', label: 'Guiding Principles' },
+                { value: '3', label: 'Key Findings' }
+            ],
+            conclusion: 'Organizational agility in micro-enterprises is fundamentally cultural rather than structural — foundations must precede frameworks, and context always matters.',
             closing: 'Thank you for your attention. I welcome your questions.'
         },
         notes: 'End strong with the central conclusion. Make eye contact. Be ready for questions.'
