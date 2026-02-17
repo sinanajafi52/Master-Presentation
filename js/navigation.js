@@ -620,7 +620,7 @@ class PresentationNavigation {
                 <p class="slide-subtitle">${content.headline}</p>
             </div>
             <div class="slide-content" style="justify-content: space-between;">
-                <div class="framework-layers stagger-children">
+                <div class="framework-layers">
                     ${content.layers.map((layer, index) => `
                         <div class="framework-layer ${layer.type}">
                             <span class="layer-icon">${layerIcons[index]}</span>
@@ -664,7 +664,7 @@ class PresentationNavigation {
                 <p class="slide-subtitle">${content.headline}</p>
             </div>
             <div class="slide-content">
-                <div class="principles-grid stagger-children">
+                <div class="principles-grid">
                     ${content.principles.map((p, i) => {
                         const s = principleStyles[i];
                         return `
