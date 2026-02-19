@@ -36,6 +36,10 @@ class KeyboardController {
             'b': 'staticBackup',
             'B': 'staticBackup',
 
+            // Q&A Panel
+            'q': 'toggleQA',
+            'Q': 'toggleQA',
+
             // Help
             '?': 'showHelp',
 
@@ -125,6 +129,10 @@ class KeyboardController {
 
             case 'staticBackup':
                 this.enableStaticBackup();
+                break;
+
+            case 'toggleQA':
+                window.qaPanel?.toggle();
                 break;
 
             case 'showHelp':
@@ -290,7 +298,9 @@ class KeyboardController {
         const nav = window.presentationNav;
 
         // Close modals in order of priority
-        if (nav?.isQuickJumpOpen) {
+        if (window.qaPanel?.isOpen) {
+            window.qaPanel.close();
+        } else if (nav?.isQuickJumpOpen) {
             nav.closeQuickJump();
         } else if (nav?.isHelpOpen) {
             nav.closeHelp();
