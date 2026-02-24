@@ -62,15 +62,17 @@ My contribution: combining all three lenses specifically for micro-enterprises �
 ## Slide 5: Methodology (5:00 - 7:00)
 **"Here is how I conducted the research."**
 
-"I used a **qualitative multi-case study** design — four steps:
+"I used a **qualitative multi-case study** design — five steps:
 
-**Step 1 — Sampling:** **Maximum Variation Sampling** — I selected 7 German startups, Cases A to G, from very different sectors: railway, water, consulting, software, firefighting, and medical AI.
+**Step 1 — Sampling:** **Maximum Variation Sampling** — 7 German startups, Cases A to G, from very different sectors: railway, water, consulting, software, firefighting, and medical AI.
 
-**Step 2 — Data:** Semi-structured founder interviews — **445 minutes** in total.
+**Step 2 — Data Collection:** Semi-structured founder interviews — **445 minutes** in total.
 
-**Step 3 — Analysis:** **Reflexive Thematic Analysis**, Braun and Clarke 2006. I coded manually — 87 codes, 12 categories.
+**Step 3 — Coding:** **Reflexive Thematic Analysis**, Braun and Clarke 2006. Manual coding — 87 codes, 12 categories.
 
-**Step 4 — Synthesis:** I profiled each case individually, then built a **cross-case comparison matrix** across all seven.
+**Step 4 — Synthesis:** Within-case profiles first, then a **cross-case comparison matrix** across all seven.
+
+**Step 5 — Findings:** Five success factors, six principles, and the five-layer framework.
 
 This approach captured nuances that a survey simply could not."
 
