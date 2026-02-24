@@ -1,12 +1,3 @@
-# Master Thesis Presentation Script
-## "Agile Business Structure and Organizational Management for Startups: Designing Adaptive and Scalable Enterprises"
-
-**Goal:** 20 Minutes Presentation | 12 Slides + 3 Backup
-**Audience:** Prof. Dr. Denis Royer (First Supervisor), Prof. Dr. Wolfram Ludwig (Second Supervisor), Examination Board
-**Key Advice:** Be transparent about methodology, focus on findings, explain the "how" briefly but clearly.
-
----
-
 ## Slide 1: Title Slide (0:00 - 1:00)
 **"Good morning everyone. Thank you for being here."**
 
