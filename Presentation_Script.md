@@ -54,7 +54,7 @@ Second — **Complexity Leadership Theory**, Uhl-Bien 2007. It explains **HOW** 
 
 Third — **Contingency Theory**, Lawrence and Lorsch 1967. It explains **WHY** there is no one-size-fits-all — because context always matters.
 
-*(Point to Venn diagram)*
+*(Point to the integration banner at the bottom)*
 My contribution: combining all three lenses specifically for micro-enterprises — for the first time."
 
 ---
