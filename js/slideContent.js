@@ -367,7 +367,7 @@ const SLIDES = [
                     icon: '🌱',
                     number: 2,
                     title: 'Gradual Formalization',
-                    description: 'Add structure incrementally as team grows; avoid premature bureaucracy. The 6-8 person threshold requires proactive coordination mechanisms.'
+                    description: 'Add structure incrementally as team grows; avoid premature bureaucracy. Formalization should respond to actual coordination needs rather than anticipated growth, ensuring each structural addition demonstrably serves team function before the next layer is introduced.'
                 },
                 {
                     icon: '💎',
@@ -385,7 +385,7 @@ const SLIDES = [
                     icon: '🎯',
                     number: 5,
                     title: 'Monitor the 6-8 Person Threshold',
-                    description: 'This critical inflection point requires proactive structural intervention through domain-based decisions or regular alignment meetings.'
+                    description: 'The 6-8 person threshold is the primary diagnostic trigger for activating Principle 2\'s gradual formalization strategy. At this inflection point communication links increase five-fold (6→28), requiring a shift from reactive to proactive coordination. Interventions include domain-based decisions, weekly alignment meetings, or selective ceremonies — introduced before coordination failures emerge.'
                 },
                 {
                     icon: '🛡️',
