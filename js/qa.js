@@ -177,15 +177,15 @@ const QA_META = {
     // ── CHALLENGING ──
     'C1': {
         priority: 1,
-        shortAnswer: `Seems obvious now, but practitioner literature overwhelmingly says framework first — choose Scrum, implement SAFe. Academic literature treats culture and structure as parallel. Empirical evidence specifically for micro-enterprises showing the sequence matters — and that getting it wrong costs agility — that's the contribution.`
+        shortAnswer: `It sounds obvious now — but in practice, almost all startup advice says framework first. Choose Scrum, implement SAFe. Even academic literature treats culture and structure as parallel, not sequential. My contribution is empirical evidence specifically for micro-enterprises showing that the sequence matters — and that getting it wrong costs agility.`
     },
     'C2': {
         priority: 1,
-        shortAnswer: `They're preliminary and evidence-based, not definitive prescriptions. Eisenhardt explicitly supports theory building from cases. The alternative — waiting for quantitative validation — leaves practitioners without any research-based guidance for years. The framework is a useful starting point for future research to refine or challenge.`
+        shortAnswer: `The framework is preliminary and evidence-based — not a definitive prescription. Eisenhardt explicitly supports theory building from cases. The alternative is waiting years for quantitative validation while founders have no research-based guidance at all. This framework gives them a starting point.`
     },
     'C3': {
         priority: 1,
-        shortAnswer: `Partially — the cross-sectional design limits long-term claims. But I address the foundations for sustainability: cultural DNA, the 6–8 threshold as a sustainability risk point, and Principle 6 on preserving culture during growth. Longitudinal validation is explicitly the top future research recommendation.`
+        shortAnswer: `Partially — and I am honest about that. My design is cross-sectional so I can't prove long-term claims. But I address the foundations: cultural DNA, the 6–8 threshold as a risk point, and Principle 6 on preserving culture during growth. Longitudinal research is my top recommendation for future studies.`
     },
     'C4': {
         priority: 1,
