@@ -435,12 +435,6 @@ const SLIDES = [
                     description: 'Self-reported data without team member triangulation',
                     mitigation: 'Reflexive analysis reduces single-source bias'
                 },
-                {
-                    icon: '📏',
-                    title: 'Size Range',
-                    description: 'Specific to 2-10 employees, may not scale beyond',
-                    mitigation: 'Deliberate scope — fills the exact research gap'
-                }
             ],
             futureResearch: [
                 { icon: '📈', text: 'Longitudinal studies tracking startups through the 6-8 threshold' },
