@@ -703,7 +703,6 @@ class PresentationNavigation {
                                     <div class="limitation-content">
                                         <div class="limitation-title">${l.title}</div>
                                         <div class="limitation-desc">${l.description}</div>
-                                        <div class="limitation-mitigation">↳ ${l.mitigation}</div>
                                     </div>
                                 </div>
                             `).join('')}
